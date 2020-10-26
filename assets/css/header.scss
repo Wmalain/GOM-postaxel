@@ -1,0 +1,90 @@
+header{
+  font-family:"damion";
+  font-size: 1.2em; 
+}
+.logo{
+    height: 130 !important;
+    width: 283px;
+   
+} 
+
+.header1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 150px;
+    background-color: #F47A60;
+}
+.header2{
+    
+    height: 80px;
+    background-color: #316879;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+}
+.nav2{
+    margin: inherit;
+    width: 100%;
+    display: flex;
+    justify-content:  space-around;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+    
+}
+.nav{
+    border: 3px solid #F47A60;
+    border-radius: 40%;
+    padding: 10px;
+    background-color: #CED7D8;
+    color: #316879;
+    text-decoration: none;
+}
+/* Dropdown Button */
+.dropbtn {
+    background-color: #CED7D8;
+    color: #316879;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #316879;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a:hover{
+    margin-left: 5%;
+    transition: 0.5s;
+  }
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: #F47A60;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #316879;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #F47A60;}

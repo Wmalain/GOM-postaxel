@@ -1,0 +1,111 @@
+npm run sass    
+
+user*
+
+0- id
+1- pseudo
+2- mail
+3- mdp
+4- role
+
+
+genre_de_film*
+
+0- id
+1- Drame
+2- Policier / Thriller
+3- Comédie / Comédie romantique
+4- Horreur
+5- Science Fiction / Anticipation
+6- Fantastique
+7- Action / Aventure
+8- Guerre / Western
+9- Animé
+10- Peplum / Cape et épée
+11- Historique
+12- Documentaire
+13- Autres
+
+
+type_de_film*
+
+0- id
+1- feel good movie
+2- Film choc
+3- Film a grand spectacle
+4- Film éducatif
+5- Film triste
+6- frisson
+7- nanar
+8- aucun
+
+
+date*
+
+0-id
+1- années 90
+2- années 80
+3- années 70
+4- années 60
+5- années 50
+6- années 40
+7- années 30
+8- années 20 et -
+
+age*
+
+0- id
+1- Enfant
+2- Ado
+3- Adulte
+
+
+films*
+
+0- id
+1- titre
+2- realisateur
+3- synopsis
+4- lien
+5- affiche
+6- id_genre
+7- id_decenie
+8- id_age
+9- id_type1
+10- id_type2
+11- id_type3
+
+$sql = $db->query(SELECT * FROM house LEFT JOIN city ON house.city_id = city.id LEFT JOIN region ON house.region_id = region.id LEFT JOIN comment ON house.comment_id = comment.id LEFT JOIN user ON house.user_id = user.id);
+
+House
+id
+name
+year
+description
+image
+adresse
+city_id -
+region_id -
+comment_id -
+user_id-
+
+city
+id
+city_name
+
+region
+id
+region_name
+
+comment
+id
+comment_name
+id_user
+
+user
+id
+nom
+prenom
+mail
+password
+roles

@@ -1,0 +1,21 @@
+unction displaymovie()
+{
+    global $db;
+
+    // $sql = $db->query('SELECT * FROM movie order by RAND() limit 0,1');
+    $sql = $db->query('SELECT *, age.id AS age_id, date.id AS date_id, genre_de_film.id AS genre_id, type_de_film.id AS type_id FROM movie LEFT JOIN age ON movie.id_age = age_id LEFT JOIN date ON movie.id_date = date_id LEFT JOIN genre_de_film ON movie.id_genre = genre_id LEFT JOIN (type_de_film ON movie.id_type1 = type_id) OR (type_de_film ON movie.id_type2 = type_id) OR (type_de_film ON movie.id_type3 = type_id) order by RAND() limit 0,1');
+    $sql->setFetchMode(PDO::FETCH_ASSOC);
+    while ($row = $sql->fetch()) {
+        ?>
+            <div class="">
+                <div class="vinafficheall">
+                    <p><?php echo $row['titre']; ?></p>
+                    <p><?php echo $row['realisateur']; ?></p>
+                    <p><?php echo $row['synopsis']; ?></p>
+                    <p><?php echo $row['genre']; ?></p>
+
+                </div>
+            </div>
+        <?php
+    }
+}

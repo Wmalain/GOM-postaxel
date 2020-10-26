@@ -1,0 +1,26 @@
+.titre1{
+    text-align: center;
+    margin-top:5%;
+}
+.gen{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+   border: 3px solid #316879;
+   margin:0% 30% 0% 30%;
+   padding: 0.5%
+
+}
+.affiche{
+    height: 300px;
+    margin-right: 50px;
+}
+
+.filmul{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    padding: inherit;
+}

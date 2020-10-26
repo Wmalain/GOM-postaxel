@@ -1,0 +1,34 @@
+- Back -
+
+1 - Session connexion et déconnexion pour l'administrateur (ok)
+    
+2 - Ajout d'un film dans la Base de données(ok)
+3 - Modification d'un film dans la Base de données
+4 - Suppression d'un film dans la base de données
+5 - Affichage d'un film pris au hasard dans la Base de données (ok)
+    I - dans toutes la base de données (ok)
+    II - selon son genre (ok)
+    III - selon ses types (ok)
+    IV - selon sa recommendations d'age (ok)
+6 - affichage d'un tableau avec tous les films dans la Base de données pour le panel Admin
+    I - Films dans l'ordre alphabetique
+    II - barre de recherche
+    III - Pagination
+7 - enlever les espace quand on rajoute un film et mettre ls premiere lettre en Majuscule automatiquement.
+
+Si j'ai le temps
+1 - une Session Utilisateur
+    I - une page utilisateur 
+    II - la possibilité pour les utilisateurs de mettre des commentaires sur les films!
+    III - la possibilité de cliquer sur des icones (j'ai aimé, coup de coeur, je n'ai pas aimé) pour chaque film
+    IV -
+
+- Front -
+
+1 - création de la navbar et du header
+    I - Mise en form de la navbar et du header
+2 - Création du formulaire d'ajout de film (ok)
+    I - mise en page du formulaire
+3 - création du formulaire de Modification de film
+    I - mise en page du formulaire
+4 - Pagination de la page Admin
