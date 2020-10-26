@@ -28,7 +28,7 @@ require 'assets/inc/header.php';
                         <p class="p"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dignissimos earum sit repellendus fugiat aliquam veritatis facere impedit ipsa minima, reiciendis, possimus sint quia aliquid ad enim maiores nobis magni quis, inventore labore! Minus qui dolores cumque dolore rem doloremque ratione temporibus quod non. Nobis velit recusandae voluptas odit reiciendis.</p>
                     </div>
                     <div class="gena">
-                        <a class="a" href="#">lien</a>
+                        <a class="imdb" href="#">lien</a>
                     </div>
                             
                 </div>

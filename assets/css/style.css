@@ -1,5 +1,5 @@
 header {
-  font-family: "damion";
+  font-family: "damion", sans-serif;
   font-size: 1.2em;
 }
 
@@ -437,6 +437,7 @@ template {
 }
 
 .titre1 {
+  font-family: "SyneMono", sans-serif;
   text-align: center;
   margin-top: 5%;
 }
@@ -462,6 +463,15 @@ template {
   align-items: center;
   justify-content: space-around;
   padding: inherit;
+}
+
+.p {
+  margin: 5px 50px 5px 50px;
+}
+
+.imdb {
+  text-align: center;
+  margin: 5px auto;
 }
 
 /*# sourceMappingURL=style.css.map */
