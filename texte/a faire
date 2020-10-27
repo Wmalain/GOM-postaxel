@@ -3,17 +3,16 @@
 1 - Session connexion et déconnexion pour l'administrateur (ok)
     
 2 - Ajout d'un film dans la Base de données(ok)
-3 - Modification d'un film dans la Base de données
-4 - Suppression d'un film dans la base de données
+3 - Modification d'un film dans la Base de données (ok)
+4 - Suppression d'un film dans la base de données (ok)
 5 - Affichage d'un film pris au hasard dans la Base de données (ok)
     I - dans toutes la base de données (ok)
     II - selon son genre (ok)
     III - selon ses types (ok)
     IV - selon sa recommendations d'age (ok)
-6 - affichage d'un tableau avec tous les films dans la Base de données pour le panel Admin
-    I - Films dans l'ordre alphabetique
-    II - barre de recherche
-    III - Pagination
+6 - barre de recherche admin (ok)
+    II - 
+    
 7 - enlever les espace quand on rajoute un film et mettre ls premiere lettre en Majuscule automatiquement.
 
 Si j'ai le temps

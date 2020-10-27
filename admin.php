@@ -30,12 +30,18 @@ if (isset($_POST['submit-login'])) {
 
 if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
     ?>
-<a href="ajoutfilm.php">Ajouter un film</a>
-<a href="?logout" class="linkadmin">Se déconnecter</a>
+    
+<a href="ajoutfilm.php"><i class="fas fa-film"></i></a>
+<a href="?logout" class="linkadmin"><i class="fas fa-times-circle"></i></a>
+
+<form class="text-center" method="POST" action=""> 
+     titre de film <input type="text" name="recherche" placeholder="titre de film">
+     <input name="search" type="SUBMIT" value="Search!" > 
+     </form>
 
 
 <?php
-displayallmovie();
+searchmovie();
 } else {
     ?>
 

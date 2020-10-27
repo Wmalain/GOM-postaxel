@@ -1,27 +1,5 @@
 <?php
 
-function displayallmovie()
-{
-    global $db;
-
-    // $sql = $db->query('SELECT * FROM movie order by RAND() limit 0,1');
-    $sql = $db->query('SELECT *, movie.id AS movie_id FROM movie LEFT JOIN age ON movie.id_age = age.id LEFT JOIN date ON movie.id_date = date.id LEFT JOIN genre_de_film ON movie.id_genre = genre_de_film.id LEFT JOIN type_de_film ON movie.id_type1 = type_de_film.id order by RAND() ');
-    $sql->setFetchMode(PDO::FETCH_ASSOC);
-    while ($row = $sql->fetch()) {
-        ?>
-            <div class="">
-                <div class="vinafficheall">
-                    <p><?php echo $row['titre']; ?></p>
-                    <p><?php echo $row['realisateur']; ?></p>
-                    <p><?php echo $row['genre']; ?></p>
-                    <a href="modify_movie.php?id=<?php echo $row['movie_id']; ?> ">modifier</a>
-                    <a href="delete_movie.php?id=<?php echo $row['movie_id']; ?> ">supprimer</a>
-                </div>
-            </div>
-        <?php
-    }
-}
-
 function displaymovie()
 {
     global $db;
@@ -124,4 +102,36 @@ function displaymovieage($id)
     }
 }
 
-?>
+function searchmovie()
+{
+    // Ouvre une connexion au serveur MySQL
+    if (isset($_POST['search'])) {
+        global $db;
+
+        // $conn = mysqli_connect('localhost', 'root', '', 'gom');
+
+        $recherche = $_POST['recherche'];
+
+        $sql = $db->query("SELECT * FROM movie WHERE titre LIKE '%".$recherche."%'");
+        $sql->setFetchMode(PDO::FETCH_ASSOC);
+        if ($sql->execute()) {
+            while ($row = $sql->fetch()) {
+                ?>
+
+</br>
+            <tr>
+                <td><?php echo $row['titre']; ?></td> 
+                <td><?php echo $row['realisateur']; ?></td>
+                <td><a href="modify_movie.php?id=<?php echo $row['id']; ?> "><i class="fas fa-video"></i></a>
+</td>
+                <td><a href="delete_movie.php?id=<?php echo $row['id']; ?> "><i class="fas fa-trash-alt"></i></a>
+</td></br>
+            </tr>
+           
+        </div>
+            </div>
+    <?php
+            }
+        }
+    }
+}?>

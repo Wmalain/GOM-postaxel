@@ -2,20 +2,21 @@
 require 'assets/inc/header.php';
 
 $id = $_GET['id'];
-$sql = $db->query("SELECT * FROM movie WHERE id = {$id}");
-$sql->setFetchMode(PDO::FETCH_ASSOC);
 
+$sql = $db->query("SELECT * FROM movie LEFT JOIN age ON movie.id_age = age.id LEFT JOIN date ON movie.id_date = date.id LEFT JOIN genre_de_film ON movie.id_genre = genre_de_film.id LEFT JOIN type_de_film ON movie.id_type1 = type_de_film.id  WHERE movie.id = {$id}");
+$mov = $sql->fetch();
 ?>
 
 
 <form action="modify_movie_post.php" method="post" enctype="multipart/form-data">
 
 <div class="formfilm" >
-    <input type="text" name="titre" id="titre" value="" placeholder="titre" required>
+    <input type="text" name="titre" id="titre" value="<?php echo $mov['titre']; ?>" placeholder="titre" required>
 </div>
 
 <div>
-    <input type="text" name="real" id="real" value="" placeholder="réalisateur" required>
+    <input type="text" name="real" id="real" value="<?php echo $mov['realisateur']; ?>" placeholder="réalisateur" required>
+
     <select id="genre" placeholder="genre" name="genre">
         <option value="">--Genre--</option>
         <option value="1">Drame</option> 
@@ -71,17 +72,16 @@ $sql->setFetchMode(PDO::FETCH_ASSOC);
 </div>
 <div>
     
-    <input type="text" name="lien" id="lien" value="" placeholder="lien IMDB" required>
+    <input type="text" name="lien" id="lien" value="<?php echo $mov['lien']; ?>" placeholder="lien IMDB" required>
 
 </div>
 <div>
     <textarea id="synopsis" name="synopsis"
-          rows="5" cols="33">
-          synopsis
+          rows="5" cols="33"><?php echo $mov['synopsis']; ?>
     </textarea>
 </div>
 <div>
-    <input type="file" name="photo" id="photo" accept=".png,.jpeg,.jpg,.gif">
+    <input type="file" name="photo" id="photo" accept=".png,.jpeg,.jpg,.gif" value="<?php $mov['affiche']; ?>">
 </div>
 <input type="hidden" name="id" value="<?php echo $id; ?>">
 <input type="submit" name="btnmodify" value="Modifier le film">
