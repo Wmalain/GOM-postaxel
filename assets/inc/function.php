@@ -5,7 +5,7 @@ function displayallmovie()
     global $db;
 
     // $sql = $db->query('SELECT * FROM movie order by RAND() limit 0,1');
-    $sql = $db->query('SELECT * FROM movie LEFT JOIN age ON movie.id_age = age.id LEFT JOIN date ON movie.id_date = date.id LEFT JOIN genre_de_film ON movie.id_genre = genre_de_film.id LEFT JOIN type_de_film ON movie.id_type1 = type_de_film.id order by RAND() ');
+    $sql = $db->query('SELECT *, movie.id AS movie_id FROM movie LEFT JOIN age ON movie.id_age = age.id LEFT JOIN date ON movie.id_date = date.id LEFT JOIN genre_de_film ON movie.id_genre = genre_de_film.id LEFT JOIN type_de_film ON movie.id_type1 = type_de_film.id order by RAND() ');
     $sql->setFetchMode(PDO::FETCH_ASSOC);
     while ($row = $sql->fetch()) {
         ?>
@@ -14,6 +14,8 @@ function displayallmovie()
                     <p><?php echo $row['titre']; ?></p>
                     <p><?php echo $row['realisateur']; ?></p>
                     <p><?php echo $row['genre']; ?></p>
+                    <a href="modify_movie.php?id=<?php echo $row['movie_id']; ?> ">modifier</a>
+                    <a href="delete_movie.php?id=<?php echo $row['movie_id']; ?> ">supprimer</a>
                 </div>
             </div>
         <?php

@@ -437,9 +437,15 @@ template {
 }
 
 .titre1 {
-  font-family: "SyneMono", sans-serif;
+  font-family: "Palanquin Dark", sans-serif;
+  font-size: 3em;
   text-align: center;
   margin-top: 5%;
+  color: #F47A60;
+}
+
+.titre2 {
+  text-align: center;
 }
 
 .gen {
@@ -447,7 +453,7 @@ template {
   justify-content: center;
   align-items: center;
   border: 3px solid #316879;
-  margin: 0% 30% 0% 30%;
+  margin: 0% 15% 0% 15%;
   padding: 0.5%;
 }
 
@@ -466,10 +472,11 @@ template {
 }
 
 .p {
-  margin: 5px 50px 5px 50px;
+  margin: 5px 15% 5px 15%;
+  text-align: justify;
 }
 
-.imdb {
+.gena {
   text-align: center;
   margin: 5px auto;
 }

@@ -7,8 +7,8 @@ require 'assets/inc/header.php';
                     <img src="assets/img/51yiWETM1DL._AC_.jpg" alt="affiche" class="affiche">
                 </div>
                 <div class="row2">
-                    <div class="titre">
-                        <h2>titre</h2>
+                    <div>
+                        <h2 class="titre2">titre</h2>
                     </div>
                     <div class="reagenredeceage">
                         <div class="reagenre">
