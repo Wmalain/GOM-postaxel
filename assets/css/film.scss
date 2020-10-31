@@ -39,3 +39,133 @@
     text-align: center;
     margin:5px auto;
 }
+
+
+//
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+/*-- Variables --*/
+$grey-color: #316879;
+$primary-color: #F47A60;
+$sec-color: #020518;
+$gold-color: #fdba2e;
+
+$large-screen: 1024px;
+$medium-screen: 780px;
+$small-screen: 500px;
+
+/*---- Global ----*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 100%;
+    vertical-align: bottom;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html, body { 
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    color: $grey-color;
+}
+
+p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.titrefilm{
+    font-size:2em;
+}
+
+img {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
+
+@for $index from 1 through 6 {
+    h#{$index}{
+      color: $primary-color;
+      font-family:"damion", sans-serif;
+    }
+}
+
+h2 {
+    font-size: 1em;
+    margin-bottom: 15px;
+
+}
+.movie-info{
+    margin-left: 10px;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+/*movie-card*/
+.movie-card {
+    border: 3px solid $grey-color;
+    margin : 10% 10%;
+    display: grid;
+    grid-template-columns: 2fr 400px .5fr 400px 2fr;
+    grid-template-areas: '. p . m .';
+    @media screen and (max-width: $large-screen) {
+        grid-template-columns: 1fr 4fr 1fr 4fr 1fr;
+    }
+    @media screen and (max-width: $medium-screen) {
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas: '. p .'
+                             '. m .';
+    }
+    @media screen and (max-width: $small-screen) {
+        grid-template-columns: .5fr 4fr .5fr;
+        grid-template-areas: '. p .'
+                             '. m .';
+    }
+    .poster-wrapper {
+        grid-area: p;
+        .poster {
+            position: relative;
+            color: #fff;
+            @media screen and (max-width: $small-screen) {
+                margin-bottom: 30px;
+            }
+
+        }
+    }
+    .btnimdb{
+        text-align: center !important;
+        border: 3px solid #316879;
+        background-color: #F47A60;
+        color: #316879;
+        padding: 16px;
+        font-size: 16px;
+        border-radius: 20%;
+        font-family:"damion", sans-serif;
+        font-size:1.2em;
+    }
+
+
+
+
+    .movie-info {
+        grid-area: m;
+        &>div {
+            margin-bottom: 30px;
+        }
+    }
+        .header-section {
+            p {
+                margin: 5px 0;
+            }
+            }
+
+    }
+

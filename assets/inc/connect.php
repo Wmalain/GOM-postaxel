@@ -4,7 +4,7 @@
 //    fin de session pour déconnexion
      if (isset($_GET['logout'])) {
          session_destroy();
-         header('Location:index.php');
+         header('Location:admin.php');
      }
     // connexion a la bdd
     $servername = 'localhost'; $dbname = 'gom'; $user = 'root'; $pass = '';
