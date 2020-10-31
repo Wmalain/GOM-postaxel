@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Lato");
 header {
   font-family: "damion", sans-serif;
   font-size: 1.2em;
@@ -466,7 +465,7 @@ html, body {
 }
 
 p {
-  font-family: "Lato", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 20px;
 }
@@ -475,10 +474,18 @@ p {
   font-size: 2em;
 }
 
-img {
-  width: 100%;
-  margin-top: 25px;
-  margin-bottom: 25px;
+.affiche {
+  width: 90%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 400px;
+  width: 283px;
+}
+@media screen and (max-width: 500px) {
+  .affiche {
+    height: 200px;
+    width: 141px;
+  }
 }
 
 h1 {
@@ -517,7 +524,7 @@ h2 {
 }
 
 .movie-info {
-  margin-left: 10px;
+  margin: auto 10px auto 10px;
   text-align: center;
   padding-bottom: 25px;
 }
@@ -525,7 +532,9 @@ h2 {
 /*movie-card*/
 .movie-card {
   border: 3px solid #316879;
-  margin: 5% 10% 1% 10%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 50px;
   display: grid;
   grid-template-columns: 2fr 400px 0.5fr 400px 2fr;
   grid-template-areas: ". p . m .";
@@ -551,6 +560,7 @@ h2 {
   grid-area: p;
 }
 .movie-card .poster-wrapper .poster {
+  text-align: center;
   position: relative;
   color: #fff;
 }
@@ -569,6 +579,7 @@ h2 {
   border-radius: 20%;
   font-family: "damion", sans-serif;
   font-size: 1.2em;
+  margin-bottom: 20px;
 }
 .movie-card .movie-info {
   grid-area: m;
@@ -578,6 +589,23 @@ h2 {
 }
 .movie-card .header-section p {
   margin: 5px 0;
+}
+
+.relaunch {
+  width: 100%;
+}
+
+.btnrandom {
+  text-align: center;
+  border: 3px solid #316879;
+  background-color: #F47A60;
+  color: #316879;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 20%;
+  font-family: "damion", sans-serif;
+  font-size: 1.2em;
+  margin: 25px auto 25px auto;
 }
 
 .div1admin {
@@ -711,9 +739,15 @@ h2 {
   margin-bottom: 10px;
   width: 15%;
   box-sizing: border-box;
-  font-family: montserrat;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
   color: #316879;
-  font-size: 13px;
+}
+
+.inputform::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  color: #316879;
 }
 
 .inputform1 {
@@ -723,10 +757,16 @@ h2 {
   margin-bottom: 10px;
   width: 30%;
   box-sizing: border-box;
-  font-family: montserrat;
+  font-family: "Roboto", sans-serif;
   color: #316879;
   font-size: 13px;
   margin-top: 5px;
+}
+
+.inputform1::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  color: #316879;
 }
 
 .inputform2 {
@@ -739,6 +779,12 @@ h2 {
   font-family: montserrat;
   color: #316879;
   font-size: 13px;
+}
+
+.inputform2::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5em;
+  color: #316879;
 }
 
 .inputbtn {
@@ -759,6 +805,7 @@ h2 {
   margin: 2% 25%;
   border: 1px solid #316879;
   padding: 3% 2%;
+  font-family: "Roboto", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

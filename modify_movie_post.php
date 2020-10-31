@@ -14,7 +14,7 @@ if (isset($_POST['btnmodify'])) {
     $id_type1 = htmlspecialchars($_POST['ee1']);
     $id_date = htmlspecialchars($_POST['decenie']);
 
-    if ($photo['size'] <= 1000000) {
+    if ($photo['size'] <= 9000000) {
         $valid_ext = ['jpg', 'jpeg', 'gif', 'png', 'webp'];
         $check_ext = strtolower(substr(strrchr($photo['name'], '.'), 1));
 

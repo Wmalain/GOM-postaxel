@@ -9,11 +9,10 @@ function displaymovie()
     $sql->setFetchMode(PDO::FETCH_ASSOC);
     while ($row = $sql->fetch()) {
         ?>
-
 <div class="movie-card">
         <div class="poster-wrapper">
           <div class="poster">
-          <img src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
+          <img class="affiche" src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
           </div>
         </div>
         <!-- end poster-wrapper -->
@@ -34,8 +33,11 @@ function displaymovie()
           </div>
           <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
 
+
         </div>
+        
       </div>
+     
       <!-- end movie-card -->
    
         <?php

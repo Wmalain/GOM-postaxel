@@ -19,9 +19,17 @@
         margin-bottom: 10px;
         width: 15%;
         box-sizing: border-box;
-        font-family: montserrat;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.1em;
         color: #316879;
-        font-size: 13px;
+    }
+    .inputform::placeholder{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5em;
+        color: #316879;
+
+
+
     }
 .inputform1{
 
@@ -31,12 +39,16 @@
         margin-bottom: 10px;
         width: 30%;
         box-sizing: border-box;
-        font-family: montserrat;
+        font-family: 'Roboto', sans-serif;
         color: #316879;
         font-size: 13px;
         margin-top: 5px;
     }
-    
+    .inputform1::placeholder{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5em;
+        color: #316879;
+    }
 .inputform2{
 
         padding: 15px;
@@ -48,6 +60,11 @@
         font-family: montserrat;
         color: #316879;
         font-size: 13px;
+}
+.inputform2::placeholder{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+    color: #316879;
 }
 .inputbtn{
     font-family:"damion", sans-serif;

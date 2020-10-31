@@ -78,6 +78,7 @@ $mov = $sql->fetch();
 <div>
     <input type="file" name="photo" id="photo" class="inputform2" accept=".png,.jpeg,.jpg,.gif">
 </div>
+<input type="hidden" name="id" class="inputbtn" value="<?php echo $id; ?> ">
 <input type="submit" name="btnmodify" class="inputbtn" value="Modifier le film">
 </form>
 
