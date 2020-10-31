@@ -445,51 +445,6 @@ template {
   display: none;
 }
 
-.titre1 {
-  font-family: "Palanquin Dark", sans-serif;
-  font-size: 3em;
-  text-align: center;
-  margin-top: 5%;
-  color: #F47A60;
-}
-
-.titre2 {
-  text-align: center;
-}
-
-.gen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid #316879;
-  margin: 0% 15% 0% 15%;
-  padding: 0.5%;
-}
-
-.affiche {
-  height: 300px;
-  margin-right: 50px;
-}
-
-.filmul {
-  text-decoration: none;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: inherit;
-}
-
-.p {
-  margin: 5px 15% 5px 15%;
-  text-align: justify;
-}
-
-.gena {
-  text-align: center;
-  margin: 5px auto;
-}
-
 /*-- Variables --*/
 /*---- Global ----*/
 * {
@@ -497,7 +452,6 @@ template {
   padding: 0;
   border: 0;
   outline: 0;
-  font-family: "Lato", sans-serif;
   font-size: 100%;
   vertical-align: bottom;
   text-decoration: none;
@@ -512,7 +466,8 @@ html, body {
 }
 
 p {
-  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
   line-height: 20px;
 }
 
@@ -695,6 +650,12 @@ h2 {
   color: #F47A60;
 }
 
+@media screen and (max-width: 500px) {
+  .tab {
+    font-size: 0.5em;
+  }
+}
+
 .btnconnecthead {
   font-size: 1.5em;
   border: 1px solid #F47A60;
@@ -707,7 +668,6 @@ h2 {
 }
 
 .tabgen {
-  border: 1px solid #316879;
   padding: 5px 10%;
   margin: auto;
 }

@@ -1,3 +1,8 @@
+$large-screen: 1024px;
+$medium-screen: 780px;
+$small-screen: 500px;
+
+
 .div1admin{
     margin: 2% auto 5% auto;
     text-align: center;
@@ -67,6 +72,12 @@
     color: #F47A60;
 
 }    
+.tab{
+    @media screen and (max-width: $small-screen) {
+        font-size:0.5em;
+
+    }
+}
 
 .btnconnecthead{
     font-size: 1.5em;
@@ -77,11 +88,11 @@
     color: #F47A60;
     padding: 9px;
     margin-left: 10px;
+    
 }
 
 
 .tabgen{
-    border: 1px solid #316879;
     padding:5px 10%;
     margin: auto;
 }
