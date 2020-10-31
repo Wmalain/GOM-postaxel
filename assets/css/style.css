@@ -525,7 +525,7 @@ h2 {
 /*movie-card*/
 .movie-card {
   border: 3px solid #316879;
-  margin: 5% 10% 0 10%;
+  margin: 5% 10% 1% 10%;
   display: grid;
   grid-template-columns: 2fr 400px 0.5fr 400px 2fr;
   grid-template-areas: ". p . m .";
@@ -691,6 +691,68 @@ h2 {
 .btnad2 {
   font-size: 1.5em;
   color: #F47A60;
+}
+
+.h1form {
+  text-align: center;
+  font-size: 3em;
+  font-family: "damion", sans-serif;
+  color: #F47A60;
+}
+
+.form {
+  text-align: center;
+}
+
+.inputform {
+  padding: 15px;
+  border: 2px solid #F47A60;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 15%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #316879;
+  font-size: 13px;
+}
+
+.inputform1 {
+  padding: 15px;
+  border: 2px solid #F47A60;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 30%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #316879;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.inputform2 {
+  padding: 15px;
+  border: 2px solid #F47A60;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 30%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #316879;
+  font-size: 13px;
+}
+
+.inputbtn {
+  font-family: "damion", sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 15px;
+  border: 2px solid #316879;
+  background-color: #F47A60;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 15%;
+  box-sizing: border-box;
+  color: #316879;
 }
 
 /*# sourceMappingURL=style.css.map */

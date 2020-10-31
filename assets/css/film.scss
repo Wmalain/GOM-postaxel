@@ -64,7 +64,7 @@ h2 {
 /*movie-card*/
 .movie-card {
     border: 3px solid $grey-color;
-    margin : 5% 10% 0 10%;
+    margin : 5% 10% 1% 10%;
     display: grid;
     grid-template-columns: 2fr 400px .5fr 400px 2fr;
     grid-template-areas: '. p . m .';

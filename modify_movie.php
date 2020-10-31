@@ -8,16 +8,16 @@ $mov = $sql->fetch();
 ?>
 
 
-<form action="modify_movie_post.php" method="post" enctype="multipart/form-data">
+<form action="modify_movie_post.php" method="post" enctype="multipart/form-data" class="form">
 
+<h1 class="h1form">Modifier un Film</h1>
 <div class="formfilm" >
-    <input type="text" name="titre" id="titre" value="<?php echo $mov['titre']; ?>" placeholder="titre" required>
+    <input type="text" name="titre" id="titre" value="<?php echo $mov['titre']; ?>" placeholder="titre" class="inputform1" required>
 </div>
 
 <div>
-    <input type="text" name="real" id="real" value="<?php echo $mov['realisateur']; ?>" placeholder="réalisateur" required>
-
-    <select id="genre" placeholder="genre" name="genre">
+    <input type="text" class="inputform" name="real" id="real" value="<?php echo $mov['realisateur']; ?>" placeholder="réalisateur"  required>
+    <select id="genre" placeholder="genre" name="genre" class="inputform">
         <option value="">--Genre--</option>
         <option value="1">Drame</option> 
         <option value="2">Policier / Thriller</option>
@@ -36,7 +36,7 @@ $mov = $sql->fetch();
 </div>
 
 <div>
-    <select id="decenie" name="decenie" placeholder="décénie">
+    <select id="decenie" name="decenie" class="inputform" placeholder="décénie">
         <option value="">--décénie--</option>
         <option value="1">90</option>
         <option value="2">80</option>
@@ -47,7 +47,7 @@ $mov = $sql->fetch();
         <option value="7">30</option>
         <option value="8">20 et -</option>
     </select>
-    <select id="age" name="age" placeholder="Age">
+    <select id="age" name="age" class="inputform" placeholder="Age">
         <option value="">--Age--</option>
         <option value="1">Tous publique</option>
         <option value="2">Ado</option>
@@ -57,7 +57,7 @@ $mov = $sql->fetch();
 </div>
 
 <div>
-    <select id="eesprit1" name="ee1" placeholder="état d'esprit">
+    <select id="eesprit1" name="ee1" class="inputform" placeholder="état d'esprit">
         <option value="">--état d'esprit--</option>
         <option value="1">feel good movie</option>
         <option value="2">Film choc</option>
@@ -68,29 +68,18 @@ $mov = $sql->fetch();
         <option value="7">nanar</option>
         <option value="8">Aucun</option>
     </select>
-    
-</div>
-<div>
-    
-    <input type="text" name="lien" id="lien" value="<?php echo $mov['lien']; ?>" placeholder="lien IMDB" required>
+    <input type="text" name="lien" class="inputform" id="lien" value="<?php echo $mov['lien']; ?>" placeholder="Lien IMDB" required>
 
 </div>
 <div>
-    <textarea id="synopsis" name="synopsis"
-          rows="5" cols="33"><?php echo $mov['synopsis']; ?>
-    </textarea>
+    <textarea id="synopsis" name="synopsis" class="inputform2" placeholder="Synopsis"
+          rows="5" cols="33"><?php echo $mov['synopsis']; ?></textarea>
 </div>
 <div>
-    <input type="file" name="photo" id="photo" accept=".png,.jpeg,.jpg,.gif" value="<?php $mov['affiche']; ?>">
+    <input type="file" name="photo" id="photo" class="inputform2" accept=".png,.jpeg,.jpg,.gif">
 </div>
-<input type="hidden" name="id" value="<?php echo $id; ?>">
-<input type="submit" name="btnmodify" value="Modifier le film">
-
+<input type="submit" name="btnmodify" class="inputbtn" value="Modifier le film">
 </form>
-
-
-
-
 
 
 

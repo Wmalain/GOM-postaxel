@@ -48,15 +48,15 @@ if (isset($_POST['submit-signup'])) {
 }
 ?>
 
-<form action="ajoutfilm.php" method="post" enctype="multipart/form-data">
-
+<form action="ajoutfilm.php" method="post" enctype="multipart/form-data" class="form">
+<h1 class="h1form">Ajouter un Film</h1>
 <div class="formfilm" >
-    <input type="text" name="titre" id="titre" value="" placeholder="titre" required>
+    <input type="text" name="titre" id="titre" value="" placeholder="titre" class="inputform1" required>
 </div>
 
 <div>
-    <input type="text" name="real" id="real" value="" placeholder="réalisateur" required>
-    <select id="genre" placeholder="genre" name="genre">
+    <input type="text" class="inputform" name="real" id="real" value="" placeholder="réalisateur"  required>
+    <select id="genre" placeholder="genre" name="genre" class="inputform">
         <option value="">--Genre--</option>
         <option value="1">Drame</option> 
         <option value="2">Policier / Thriller</option>
@@ -75,7 +75,7 @@ if (isset($_POST['submit-signup'])) {
 </div>
 
 <div>
-    <select id="decenie" name="decenie" placeholder="décénie">
+    <select id="decenie" name="decenie" class="inputform" placeholder="décénie">
         <option value="">--décénie--</option>
         <option value="1">90</option>
         <option value="2">80</option>
@@ -86,7 +86,7 @@ if (isset($_POST['submit-signup'])) {
         <option value="7">30</option>
         <option value="8">20 et -</option>
     </select>
-    <select id="age" name="age" placeholder="Age">
+    <select id="age" name="age" class="inputform" placeholder="Age">
         <option value="">--Age--</option>
         <option value="1">Tous publique</option>
         <option value="2">Ado</option>
@@ -96,7 +96,7 @@ if (isset($_POST['submit-signup'])) {
 </div>
 
 <div>
-    <select id="eesprit1" name="ee1" placeholder="état d'esprit">
+    <select id="eesprit1" name="ee1" class="inputform" placeholder="état d'esprit">
         <option value="">--état d'esprit--</option>
         <option value="1">feel good movie</option>
         <option value="2">Film choc</option>
@@ -107,24 +107,17 @@ if (isset($_POST['submit-signup'])) {
         <option value="7">nanar</option>
         <option value="8">Aucun</option>
     </select>
-    
-</div>
-<div>
-    
-    <input type="text" name="lien" id="lien" value="" placeholder="lien IMDB" required>
+    <input type="text" name="lien" class="inputform" id="lien" value="" placeholder="Lien IMDB" required>
 
 </div>
 <div>
-    <textarea id="synopsis" name="synopsis"
-          rows="5" cols="33">
-          synopsis
-    </textarea>
+    <textarea id="synopsis" name="synopsis" class="inputform2" placeholder="Synopsis"
+          rows="5" cols="33"></textarea>
 </div>
 <div>
-    <input type="file" name="photo" id="photo" accept=".png,.jpeg,.jpg,.gif">
+    <input type="file" name="photo" id="photo" class="inputform2" accept=".png,.jpeg,.jpg,.gif">
 </div>
-<input type="submit" name="submit-signup" value="Envoyer le formulaire">
-
+<input type="submit" name="submit-signup" class="inputbtn" value="Ajouter">
 </form>
 
 
