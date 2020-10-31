@@ -755,4 +755,10 @@ h2 {
   color: #316879;
 }
 
+.indexcard {
+  margin: 2% 25%;
+  border: 1px solid #316879;
+  padding: 3% 2%;
+}
+
 /*# sourceMappingURL=style.css.map */

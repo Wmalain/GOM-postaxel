@@ -12,7 +12,7 @@ require 'assets/inc/head.php';
 
 <nav class="header2">
 <ul class="nav2">
-    <li> <a class="nav" href="index.php">Sans Filtre</a> </li>
+    <li> <a class="nav" href="no_filtre.php">Sans Filtre</a> </li>
 
     <li> <div class="dropdown">
         <button class="dropbtn">Par Genre</button>
