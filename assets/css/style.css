@@ -457,6 +457,25 @@ template {
   box-sizing: border-box;
 }
 
+.divtit {
+  width: 100%;
+}
+
+.h1film {
+  text-align: center !important;
+  margin: inherit;
+  padding-top: 20px;
+  font-family: "damion", sans-serif;
+  font-size: 3em;
+}
+
+.h2film {
+  text-align: center !important;
+  margin: inherit;
+  font-family: "damion", sans-serif;
+  font-size: 2em;
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -532,8 +551,8 @@ h2 {
 /*movie-card*/
 .movie-card {
   border: 3px solid #316879;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 13%;
+  margin-right: 13%;
   margin-top: 50px;
   display: grid;
   grid-template-columns: 2fr 400px 0.5fr 400px 2fr;

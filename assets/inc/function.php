@@ -9,7 +9,10 @@ function displaymovie()
     $sql->setFetchMode(PDO::FETCH_ASSOC);
     while ($row = $sql->fetch()) {
         ?>
-<div class="movie-card">
+        <div class="divtit"> 
+          <h1 class="h1film"> Quel film voir ce soir ?</h1>
+        </div>
+        <div class="movie-card">
         <div class="poster-wrapper">
           <div class="poster">
           <img class="affiche" src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
@@ -51,12 +54,17 @@ function displaymoviegenre($id)
     $sql->setFetchMode(PDO::FETCH_ASSOC);
     while ($row = $sql->fetch()) {
         ?>
+        <div class="divtit"> 
+          <h1 class="h1film"> Quel film voir ce soir ?</h1>
+          <h2 class="h2film">par genre</h2>
+        </div>
    <div class="movie-card">
         <div class="poster-wrapper">
           <div class="poster">
-          <img src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
+          <img class="affiche" src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
           </div>
         </div>
+        <!-- end poster-wrapper -->
         <div class="movie-info">
           <div class="header-section">
             <h1 class="titrefilm"><?php echo $row['titre']; ?></h1>
@@ -74,8 +82,13 @@ function displaymoviegenre($id)
           </div>
           <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
 
+
         </div>
+        
       </div>
+     
+      <!-- end movie-card -->
+
    
         <?php
     }
@@ -88,12 +101,17 @@ function displaymovieenvie($id)
     $sql->setFetchMode(PDO::FETCH_ASSOC);
     while ($row = $sql->fetch()) {
         ?>
-   <div class="movie-card">
+        <div class="divtit"> 
+          <h1 class="h1film"> Quel film voir ce soir ?</h1>
+          <h2 class="h2film">par envie</h2>
+        </div>
+ <div class="movie-card">
         <div class="poster-wrapper">
           <div class="poster">
-          <img src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
+          <img class="affiche" src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
           </div>
         </div>
+        <!-- end poster-wrapper -->
         <div class="movie-info">
           <div class="header-section">
             <h1 class="titrefilm"><?php echo $row['titre']; ?></h1>
@@ -111,8 +129,12 @@ function displaymovieenvie($id)
           </div>
           <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
 
+
         </div>
+        
       </div>
+     
+      <!-- end movie-card -->
    
         <?php
     }
@@ -125,12 +147,17 @@ function displaymovieage($id)
     $sql->setFetchMode(PDO::FETCH_ASSOC);
     while ($row = $sql->fetch()) {
         ?>
- <div class="movie-card">
+        <div class="divtit"> 
+          <h1 class="h1film"> Quel film voir ce soir ?</h1>
+          <h2 class="h2film">par age</h2>
+        </div>
+<div class="movie-card">
         <div class="poster-wrapper">
           <div class="poster">
-          <img src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
+          <img class="affiche" src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
           </div>
         </div>
+        <!-- end poster-wrapper -->
         <div class="movie-info">
           <div class="header-section">
             <h1 class="titrefilm"><?php echo $row['titre']; ?></h1>
@@ -148,8 +175,12 @@ function displaymovieage($id)
           </div>
           <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
 
+
         </div>
+        
       </div>
+     
+      <!-- end movie-card -->
    
         <?php
     }
