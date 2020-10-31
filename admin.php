@@ -30,13 +30,13 @@ if (isset($_POST['submit-login'])) {
 
 if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
     ?>
-    
-<a href="ajoutfilm.php"><i class="fas fa-film"></i></a>
-<a href="?logout" class="linkadmin"><i class="fas fa-times-circle"></i></a>
-
-<form class="text-center" method="POST" action=""> 
-     titre de film <input type="text" name="recherche" placeholder="titre de film">
-     <input name="search" type="SUBMIT" value="Search!" > 
+    <div class="div1admin">
+        <a class="aadmin" href="ajoutfilm.php"><i class="fas fa-film buttadmin"></i></a>
+        <a class="aadmin" href="?logout" class="linkadmin"><i class="fas fa-times-circle buttadmin"></i></a>
+    </div>
+<form class="search" method="POST" action=""> 
+     <input type="text" name="recherche" placeholder="Titre du film" class="search1">
+     <input name="search" type="SUBMIT" value="Search!"  class="search2"> 
      </form>
 
 
@@ -48,8 +48,8 @@ searchmovie();
 
 
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="formcon"> 
-    <input class="formheadconnect" type="text" name="user_email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrez votre mail...">
-    <input class="formheadconnect2" type="password" name="user_password" class="form-control" id="exampleInputPassword1" placeholder="Entrez votre mot de passe...">
+    <input class="formheadconnect" type="text" name="user_email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mail">
+    <input class="formheadconnect2" type="password" name="user_password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
     <button type="submit" name="submit-login" class="btnconnecthead">Connexion</button>
 </div>
 <?php

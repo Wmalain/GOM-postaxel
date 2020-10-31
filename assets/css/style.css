@@ -570,7 +570,7 @@ h2 {
 /*movie-card*/
 .movie-card {
   border: 3px solid #316879;
-  margin: 10% 10%;
+  margin: 5% 10% 0 10%;
   display: grid;
   grid-template-columns: 2fr 400px 0.5fr 400px 2fr;
   grid-template-areas: ". p . m .";
@@ -623,6 +623,114 @@ h2 {
 }
 .movie-card .header-section p {
   margin: 5px 0;
+}
+
+.div1admin {
+  margin: 2% auto 5% auto;
+  text-align: center;
+}
+
+.aadmin {
+  font-size: 3em;
+  padding: 0px 5% 0px 5%;
+  color: #F47A60;
+}
+
+.search {
+  text-align: center;
+}
+
+.search1 {
+  border: 1px solid #F47A60;
+  font-family: "damion", sans-serif;
+  color: #F47A60 !important;
+  font-size: 2em;
+  padding: 5px;
+  text-align: center;
+}
+
+.search1::placeholder {
+  color: #F47A60;
+}
+
+.search2 {
+  font-size: 1.5em;
+  border: 1px solid #F47A60;
+  background-color: #316879;
+  font-family: "damion", sans-serif;
+  text-align: center;
+  color: #F47A60;
+  padding: 9px;
+  margin-left: 10px;
+}
+
+.formcon {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.formheadconnect {
+  border: 1px solid #F47A60;
+  font-family: "damion", sans-serif;
+  color: #F47A60 !important;
+  font-size: 2em;
+  padding: 5px;
+  text-align: center;
+}
+
+.formheadconnect::placeholder {
+  color: #F47A60;
+}
+
+.formheadconnect2 {
+  border: 1px solid #F47A60;
+  font-family: "damion", sans-serif;
+  color: #F47A60 !important;
+  font-size: 2em;
+  padding: 5px;
+  text-align: center;
+}
+
+.formheadconnect2::placeholder {
+  color: #F47A60;
+}
+
+.btnconnecthead {
+  font-size: 1.5em;
+  border: 1px solid #F47A60;
+  background-color: #316879;
+  font-family: "damion", sans-serif;
+  text-align: center;
+  color: #F47A60;
+  padding: 9px;
+  margin-left: 10px;
+}
+
+.tabgen {
+  border: 1px solid #316879;
+  padding: 5px 10%;
+  margin: auto;
+}
+
+.tabmov1 {
+  font-size: 1.5em;
+}
+
+.tabmov2 {
+  font-size: 1.5em;
+  margin: 0 10px 0 20px;
+}
+
+.btnad1 {
+  font-size: 1.5em;
+  color: #F47A60;
+  margin-right: 30px;
+  padding-left: 30px;
+}
+
+.btnad2 {
+  font-size: 1.5em;
+  color: #F47A60;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,16 +6,15 @@ if (isset($_POST['submit-signup'])) {
     $realisateur = htmlspecialchars($_POST['real']);
     $synopsis = htmlspecialchars($_POST['synopsis']);
     $photo = $_FILES['photo'];
-    var_dump($photo);
     $lien = htmlspecialchars($_POST['lien']);
     $id_genre = htmlspecialchars($_POST['genre']);
     $id_age = htmlspecialchars($_POST['age']);
     $id_type1 = htmlspecialchars($_POST['ee1']);
     $id_date = htmlspecialchars($_POST['decenie']);
 
-    if ($photo['size'] <= 1000000) {
+    if ($photo['size'] <= 9000000) {
         // vérification pour la photo, poid et format
-        $valid_ext = ['jpg', 'jpeg', 'gif', 'png'];
+        $valid_ext = ['jpg', 'jpeg', 'gif', 'png', 'webp'];
         $check_ext = strtolower(substr(strrchr($photo['name'], '.'), 1));
 
         if (in_array($check_ext, $valid_ext)) {
@@ -41,6 +40,8 @@ if (isset($_POST['submit-signup'])) {
 
                 $sth->execute();
                 header('Location:ajoutfilm.php');
+            } else {
+                echo 'error';
             }
         }
     }

@@ -37,7 +37,7 @@ require 'assets/inc/head.php';
         <button class="dropbtn">Par Envie</button>
             <div class="dropdown-content">
                 <a href="envie.php?envie=1">feel good movie</a>
-                <a href="envie.php?envie=4">Film choc</a>
+                <a href="envie.php?envie=2">Film choc</a>
                 <a href="envie.php?envie=3">Film a grand spectacle</a>
                 <a href="envie.php?envie=4">Film éducatif</a>
                 <a href="envie.php?envie=5">Film triste</a>

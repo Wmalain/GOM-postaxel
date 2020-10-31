@@ -9,20 +9,35 @@ function displaymovie()
     $sql->setFetchMode(PDO::FETCH_ASSOC);
     while ($row = $sql->fetch()) {
         ?>
-            <div class="">
-                <div class="vinafficheall">
-                    <p><?php echo $row['titre']; ?></p>
-                    <p><?php echo $row['realisateur']; ?></p>
-                    <p><?php echo $row['synopsis']; ?></p>
-                    <p><?php echo $row['genre']; ?></p>
-                    <p><?php echo $row['lien']; ?></p>
-                    <p><?php echo $row['type']; ?></p>
-                    <p><?php echo $row['age']; ?></p>
-                    <p><?php echo $row['decennie']; ?></p>
-                    <img src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
 
-                </div>
-            </div>
+<div class="movie-card">
+        <div class="poster-wrapper">
+          <div class="poster">
+          <img src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
+          </div>
+        </div>
+        <!-- end poster-wrapper -->
+        <div class="movie-info">
+          <div class="header-section">
+            <h1 class="titrefilm"><?php echo $row['titre']; ?></h1>
+            <p><?php echo $row['realisateur']; ?> </p>
+            <p><?php echo $row['genre']; ?></p>
+            <p><?php echo $row['decennie']; ?>   /   <?php echo $row['age']; ?></p>
+            <p><?php echo $row['type']; ?></p>
+          </div>
+        
+          <div class="synopsis-section">
+            <h2>SYNOPSIS</h2>
+            <p>
+            <?php echo $row['synopsis']; ?>
+            </p>
+          </div>
+          <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
+
+        </div>
+      </div>
+      <!-- end movie-card -->
+   
         <?php
     }
 }
@@ -34,20 +49,32 @@ function displaymoviegenre($id)
     $sql->setFetchMode(PDO::FETCH_ASSOC);
     while ($row = $sql->fetch()) {
         ?>
-           <div class="">
-                <div class="vinafficheall">
-                    <p><?php echo $row['titre']; ?></p>
-                    <p><?php echo $row['realisateur']; ?></p>
-                    <p><?php echo $row['synopsis']; ?></p>
-                    <p><?php echo $row['genre']; ?></p>
-                    <p><?php echo $row['lien']; ?></p>
-                    <p><?php echo $row['type']; ?></p>
-                    <p><?php echo $row['age']; ?></p>
-                    <p><?php echo $row['decennie']; ?></p>
-                    <img src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
+   <div class="movie-card">
+        <div class="poster-wrapper">
+          <div class="poster">
+          <img src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
+          </div>
+        </div>
+        <div class="movie-info">
+          <div class="header-section">
+            <h1 class="titrefilm"><?php echo $row['titre']; ?></h1>
+            <p><?php echo $row['realisateur']; ?> </p>
+            <p><?php echo $row['genre']; ?></p>
+            <p><?php echo $row['decennie']; ?>   /   <?php echo $row['age']; ?></p>
+            <p><?php echo $row['type']; ?></p>
+          </div>
+        
+          <div class="synopsis-section">
+            <h2>SYNOPSIS</h2>
+            <p>
+            <?php echo $row['synopsis']; ?>
+            </p>
+          </div>
+          <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
 
-                </div>
-            </div>
+        </div>
+      </div>
+   
         <?php
     }
 }
@@ -59,20 +86,32 @@ function displaymovieenvie($id)
     $sql->setFetchMode(PDO::FETCH_ASSOC);
     while ($row = $sql->fetch()) {
         ?>
-           <div class="">
-                <div class="vinafficheall">
-                    <p><?php echo $row['titre']; ?></p>
-                    <p><?php echo $row['realisateur']; ?></p>
-                    <p><?php echo $row['synopsis']; ?></p>
-                    <p><?php echo $row['genre']; ?></p>
-                    <p><?php echo $row['lien']; ?></p>
-                    <p><?php echo $row['type']; ?></p>
-                    <p><?php echo $row['age']; ?></p>
-                    <p><?php echo $row['decennie']; ?></p>
-                    <img src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
+   <div class="movie-card">
+        <div class="poster-wrapper">
+          <div class="poster">
+          <img src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
+          </div>
+        </div>
+        <div class="movie-info">
+          <div class="header-section">
+            <h1 class="titrefilm"><?php echo $row['titre']; ?></h1>
+            <p><?php echo $row['realisateur']; ?> </p>
+            <p><?php echo $row['genre']; ?></p>
+            <p><?php echo $row['decennie']; ?>   /   <?php echo $row['age']; ?></p>
+            <p><?php echo $row['type']; ?></p>
+          </div>
+        
+          <div class="synopsis-section">
+            <h2>SYNOPSIS</h2>
+            <p>
+            <?php echo $row['synopsis']; ?>
+            </p>
+          </div>
+          <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
 
-                </div>
-            </div>
+        </div>
+      </div>
+   
         <?php
     }
 }
@@ -84,20 +123,32 @@ function displaymovieage($id)
     $sql->setFetchMode(PDO::FETCH_ASSOC);
     while ($row = $sql->fetch()) {
         ?>
-           <div class="">
-                <div class="vinafficheall">
-                    <p><?php echo $row['titre']; ?></p>
-                    <p><?php echo $row['realisateur']; ?></p>
-                    <p><?php echo $row['synopsis']; ?></p>
-                    <p><?php echo $row['genre']; ?></p>
-                    <p><?php echo $row['lien']; ?></p>
-                    <p><?php echo $row['type']; ?></p>
-                    <p><?php echo $row['age']; ?></p>
-                    <p><?php echo $row['decennie']; ?></p>
-                    <img src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
+ <div class="movie-card">
+        <div class="poster-wrapper">
+          <div class="poster">
+          <img src="assets/uploads/<?php echo $row['affiche']; ?>" alt="affiche">
+          </div>
+        </div>
+        <div class="movie-info">
+          <div class="header-section">
+            <h1 class="titrefilm"><?php echo $row['titre']; ?></h1>
+            <p><?php echo $row['realisateur']; ?> </p>
+            <p><?php echo $row['genre']; ?></p>
+            <p><?php echo $row['decennie']; ?>   /   <?php echo $row['age']; ?></p>
+            <p><?php echo $row['type']; ?></p>
+          </div>
+        
+          <div class="synopsis-section">
+            <h2>SYNOPSIS</h2>
+            <p>
+            <?php echo $row['synopsis']; ?>
+            </p>
+          </div>
+          <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
 
-                </div>
-            </div>
+        </div>
+      </div>
+   
         <?php
     }
 }
@@ -119,17 +170,19 @@ function searchmovie()
                 ?>
 
 </br>
-            <tr>
-                <td><?php echo $row['titre']; ?></td> 
-                <td><?php echo $row['realisateur']; ?></td>
-                <td><a href="modify_movie.php?id=<?php echo $row['id']; ?> "><i class="fas fa-video"></i></a>
-</td>
-                <td><a href="delete_movie.php?id=<?php echo $row['id']; ?> "><i class="fas fa-trash-alt"></i></a>
-</td></br>
-            </tr>
+    <div class="tab">
+      <table class="tabgen">
+        <tr>
+          <td> <p class="tabmov1"> <?php echo $row['titre']; ?> </p></td> 
+          <td> <p class="tabmov2"> <?php echo $row['realisateur']; ?> </p></td>
+          <td><a class="btnad1" href="modify_movie.php?id=<?php echo $row['id']; ?> "><i class="fas fa-video"></i></a></td>
+          <td><a class="btnad2" href="delete_movie.php?id=<?php echo $row['id']; ?> "><i class="fas fa-trash-alt"></i></a></td>
+          </br>
+        </tr>
+      </table> 
+    </div>
            
-        </div>
-            </div>
+       
     <?php
             }
         }

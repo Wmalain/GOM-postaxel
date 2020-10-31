@@ -15,7 +15,7 @@ if (isset($_POST['btnmodify'])) {
     $id_date = htmlspecialchars($_POST['decenie']);
 
     if ($photo['size'] <= 1000000) {
-        $valid_ext = ['jpg', 'jpeg', 'gif', 'png'];
+        $valid_ext = ['jpg', 'jpeg', 'gif', 'png', 'webp'];
         $check_ext = strtolower(substr(strrchr($photo['name'], '.'), 1));
 
         if (in_array($check_ext, $valid_ext)) {
@@ -39,7 +39,7 @@ if (isset($_POST['btnmodify'])) {
 
                 $sth->execute();
 
-                header('Location:modify_movie.php');
+                header('Location:admin.php');
             }
         }
     }
