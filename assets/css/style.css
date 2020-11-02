@@ -458,9 +458,10 @@ template {
 .h1film {
   text-align: center !important;
   margin: inherit;
+  margin-top: 2%;
   padding-top: 20px;
   font-family: "damion", sans-serif;
-  font-size: 3em;
+  font-size: 4em;
 }
 
 .h2film {
@@ -500,10 +501,10 @@ p {
 
 .affiche {
   width: 90%;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  height: 400px;
-  width: 283px;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  height: 500px;
+  width: 354px;
 }
 @media screen and (max-width: 576px) {
   .affiche {
@@ -582,7 +583,7 @@ h6 {
 }
 .movie-card .poster-wrapper .poster {
   text-align: center;
-  position: relative;
+  align-items: center;
   color: #fff;
 }
 @media screen and (max-width: 576px) {
@@ -597,7 +598,21 @@ h6 {
   color: #316879;
   padding: 16px;
   font-size: 16px;
-  border-radius: 20%;
+  font-family: "damion", sans-serif;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.movie-card .btn {
+  display: flex;
+  justify-content: space-around;
+}
+.movie-card #refresh {
+  text-align: center !important;
+  border: 3px solid #316879;
+  background-color: #F47A60;
+  color: #316879;
+  padding: 16px;
+  font-size: 16px;
   font-family: "damion", sans-serif;
   font-size: 1.2em;
   margin-bottom: 20px;
@@ -794,7 +809,6 @@ h6 {
   .dropdown-content {
     margin-top: 15px;
     display: none;
-    position: absolute;
     background-color: #316879;
     width: 50vw;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -869,7 +883,7 @@ h6 {
   font-size: 1.1em;
   color: #316879;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 720px) {
   .inputform {
     width: 90%;
   }
@@ -892,7 +906,7 @@ h6 {
   color: #316879;
   margin-top: 5px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 720px) {
   .inputform1 {
     width: 90%;
   }
@@ -914,7 +928,7 @@ h6 {
   font-family: "Roboto", sans-serif;
   color: #316879;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 720px) {
   .inputform2 {
     width: 90%;
   }
@@ -939,7 +953,7 @@ h6 {
   box-sizing: border-box;
   color: #316879;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 720px) {
   .inputbtn {
     width: 40%;
   }

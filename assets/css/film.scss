@@ -26,9 +26,10 @@ $small-screen: 576px;
 .h1film{
     text-align: center !important;
     margin:inherit;
+    margin-top: 2%;
     padding-top: 20px;
     font-family:"damion", sans-serif;
-    font-size: 3em;
+    font-size: 4em;
 }
 .h2film{
     text-align: center !important;
@@ -66,11 +67,12 @@ p {
 }
 
 .affiche {
+    
     width: 90%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    height: 400px;
-    width: 283px;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    height: 500px;
+    width: 354px;
     @media screen and (max-width: $small-screen) {
         height: 200px;
         width: 141px;
@@ -119,7 +121,7 @@ p {
         grid-area: p;
         .poster {
             text-align: center;
-            position: relative;
+            align-items:center;
             color: #fff;
             @media screen and (max-width: $small-screen) {
                 margin-bottom: 30px;
@@ -134,12 +136,28 @@ p {
         color: #316879;
         padding: 16px;
         font-size: 16px;
-        border-radius: 20%;
         font-family:"damion", sans-serif;
         font-size:1.2em;
         margin-bottom:20px;
     }
 
+    .btn{
+        display:flex;
+        justify-content:space-around;
+    }
+
+
+    #refresh{
+        text-align: center !important;
+        border: 3px solid #316879;
+        background-color: #F47A60;
+        color: #316879;
+        padding: 16px;
+        font-size: 16px;
+        font-family:"damion", sans-serif;
+        font-size:1.2em;
+        margin-bottom:20px;
+    }
 
 
 

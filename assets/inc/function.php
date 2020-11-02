@@ -35,8 +35,10 @@ function displaymovie()
             <?php echo $row['synopsis']; ?>
             </p>
           </div>
-          <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
-
+          <div class="btn">
+            <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
+            <button id="refresh" onclick="document.location.reload(false)" class="btnreload"> Rafraichir </button>
+          </div>
 
         </div>
         
@@ -81,13 +83,15 @@ function displaymoviegenre($id)
             <?php echo $row['synopsis']; ?>
             </p>
           </div>
-          <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
-
-
+          <div class="btn">
+            <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
+            <button id="refresh" onclick="document.location.reload(false)" class="btnreload"> Rafraichir </button>
+          </div>
+          
         </div>
-        
+
       </div>
-     
+      
       <!-- end movie-card -->
 
    
@@ -128,8 +132,10 @@ function displaymovieenvie($id)
             <?php echo $row['synopsis']; ?>
             </p>
           </div>
-          <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
-
+          <div class="btn">
+            <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
+            <button id="refresh" onclick="document.location.reload(false)" class="btnreload"> Rafraichir </button>
+          </div>
 
         </div>
         
@@ -174,8 +180,10 @@ function displaymovieage($id)
             <?php echo $row['synopsis']; ?>
             </p>
           </div>
-          <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
-
+          <div class="btn">
+            <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
+            <button id="refresh" onclick="document.location.reload(false)" class="btnreload"> Rafraichir </button>
+          </div>
 
         </div>
         
