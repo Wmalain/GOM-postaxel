@@ -1,18 +1,22 @@
+/*-- Variables --*/
+$grey-color: #316879;
+$primary-color: #F47A60;
+$large-screen: 1024px;
+$medium-screen: 780px;
+$small-screen: 576px;
+
 .h1form{
     text-align: center;
     font-size: 3em;
     font-family:"damion", sans-serif;
     color: #F47A60;
-
-}
+    }
 
 .form{
     text-align: center;
-
-}
+    }
 
 .inputform{
-
         padding: 15px;
         border: 2px solid #F47A60;
         border-radius: 3px;
@@ -22,17 +26,19 @@
         font-family: 'Roboto', sans-serif;
         font-size: 1.1em;
         color: #316879;
+        @media screen and (max-width: $small-screen) {
+            width:90%;
+        }
+    
     }
-    .inputform::placeholder{
+
+.inputform::placeholder{
         font-family: 'Roboto', sans-serif;
-        font-size: 1.5em;
+        font-size: 1.1em;
         color: #316879;
-
-
-
     }
+
 .inputform1{
-
         padding: 15px;
         border: 2px solid #F47A60;
         border-radius: 3px;
@@ -41,31 +47,39 @@
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
         color: #316879;
-        font-size: 13px;
         margin-top: 5px;
+        @media screen and (max-width: $small-screen) {
+            width:90%;
+        }
+    
     }
-    .inputform1::placeholder{
+
+.inputform1::placeholder{
         font-family: 'Roboto', sans-serif;
-        font-size: 1.5em;
+        font-size: 1.1em;
         color: #316879;
     }
-.inputform2{
 
+.inputform2{
         padding: 15px;
         border: 2px solid #F47A60;
         border-radius: 3px;
         margin-bottom: 10px;
         width: 30%;
         box-sizing: border-box;
-        font-family: montserrat;
+        font-family: 'Roboto', sans-serif;
         color: #316879;
-        font-size: 13px;
+        @media screen and (max-width: $small-screen) {
+            width:90%;
+        }
 }
+
 .inputform2::placeholder{
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.1em;
     color: #316879;
 }
+
 .inputbtn{
     font-family:"damion", sans-serif;
     font-size: 1.5em;
@@ -74,8 +88,12 @@
     border: 2px solid #316879;
     background-color: #F47A60;
     border-radius: 3px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
     width: 15%;
     box-sizing: border-box;
     color: #316879 ;
+    @media screen and (max-width: $small-screen) {
+        width:40%;
+    }
+    
 }

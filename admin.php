@@ -34,18 +34,20 @@ if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
         <a class="aadmin" href="ajoutfilm.php"><i class="fas fa-film buttadmin"></i></a>
         <a class="aadmin" href="?logout" class="linkadmin"><i class="fas fa-times-circle buttadmin"></i></a>
     </div>
-<form class="search" method="POST" action=""> 
-     <input type="text" name="recherche" placeholder="Titre du film" class="search1">
-     <input name="search" type="SUBMIT" value="Search!"  class="search2"> 
-     </form>
-
+    <div class="divform1">
+        <form class="search" method="POST" action=""> 
+            <label for="search" class="search-label">Chercher un film</label>
+    <div class="divform2">
+            <input type="text" name="recherche" placeholder="Titre du film" class="search1">
+            <input name="search" type="SUBMIT" value="Search!"  class="search2"> 
+    </div>
+    </form>
+    </div>
 
 <?php
 searchmovie();
 } else {
     ?>
-
-
 
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="formcon"> 
     <input class="formheadconnect" type="text" name="user_email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mail">

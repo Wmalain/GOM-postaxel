@@ -6,7 +6,7 @@ if (isset($_POST['submit-signup'])) {
     $mail = htmlspecialchars($_POST['mail']);
     $password1 = htmlspecialchars($_POST['password1']);
     $password2 = htmlspecialchars($_POST['password2']);
-    $roles = '1';
+    $roles = '2';
 
     if ($sql = $db->query("SELECT * FROM user WHERE email = '{$mail}'")) {
         $compteur = $sql->rowCount();
@@ -28,23 +28,22 @@ if (isset($_POST['submit-signup'])) {
     }
 }
             ?>
-
-<form action="ajoutuser.php" method="POST" class="formajoutuser">
-
-    <div>
-        <input type="text" id="lastname" name="lastname" placeholder="Nom" class="username">
-    </div>
-    <div>
-        <input type="mail" id="mail" name="mail" placeholder="Mail" class="formuser">
-    </div>
-    <div>
-        <input type="password" name="password1" class="form-control" id="password1" placeholder="votre mot de passe" class="formuser1">
-    </div>
-    <div>
-        <input type="password" name="password2" class="form-control" id="password2" placeholder="votre mot de passe">
-    </div>
-    <button type="submit" name="submit-signup" class="btninscription">Inscription</button>
-    <button type="submit" name="retour" class="btnretour">Retour</button>
-</form>
+<div>
+    <form action="ajoutuser.php" method="POST" class="formajoutuser">
+        <div>
+            <input type="text" id="lastname" name="lastname" placeholder="Nom" class="username">
+        </div>
+        <div>
+            <input type="mail" id="mail" name="mail" placeholder="Mail" class="formuser">
+        </div>
+        <div>
+            <input type="password" name="password1" class="form-control" id="password1" placeholder="votre mot de passe" class="formuser1">
+        </div>
+        <div>
+            <input type="password" name="password2" class="form-control" id="password2" placeholder="votre mot de passe">
+        </div>
+        <button type="submit" name="submit-signup" class="btninscription">Inscription</button>
+        <button type="submit" name="retour" class="btnretour">Retour</button>
+    </form>
 
 </div>

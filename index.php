@@ -1,23 +1,39 @@
 <?php
 require 'assets/inc/header.php';
-
-// displaymovie();
-
 ?>
 
 
 <div class="indexcard">
     <h1 class="h1ind">Concept du site !</h1>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, aliquid. Iure qui, cum, adipisci minima quasi modi nesciunt rerum repellendus vel earum a in nisi suscipit reiciendis ut ratione vitae.
-Sunt quos illum, eaque ipsum, facilis atque ducimus fugit provident non repellendus quae totam earum doloribus accusamus numquam quisquam, accusantium omnis distinctio laudantium deleniti deserunt. Excepturi atque expedita quisquam. Voluptatem?
-Quam aperiam consectetur, tempora quia at obcaecati, temporibus dicta odit itaque enim sapiente ratione. Provident, architecto, dolorem obcaecati, possimus fuga cupiditate quasi est magni beatae a quo hic! Expedita, cupiditate!
-Deleniti ea soluta debitis modi deserunt earum accusantium hic vitae nesciunt quod, alias dicta at tempora dolor ut odio quae corrupti sint incidunt. Asperiores non officiis facilis, at eveniet cum!
-Quam laboriosam a impedit temporibus molestiae dolore eveniet qui, reiciendis perspiciatis tenetur, sunt sint totam fuga excepturi doloremque quisquam id repellendus reprehenderit illo aperiam dolorum voluptate. Quos voluptatem dolorem officiis!
-Obcaecati alias veniam praesentium nesciunt aperiam recusandae, itaque rem ea, voluptatibus sequi magnam. Animi cumque ducimus reprehenderit exercitationem sapiente voluptatibus suscipit, at porro ipsa quae tempore in quasi. Eius, nesciunt.
-Rerum eius doloremque dolorem. Sed tenetur ab expedita? Fuga impedit libero labore blanditiis iusto cumque nihil dolorum, nostrum distinctio dolore sequi nesciunt doloribus quia tempora explicabo cupiditate atque voluptatibus dignissimos.
-Dolor esse deserunt quisquam, quidem ipsa aut maxime labore illo, ullam reiciendis quia odio rem sed non eligendi odit, in explicabo incidunt ad quae! Quas assumenda non expedita aspernatur repudiandae!
-Adipisci, libero a praesentium ullam laborum id illum nam eum perferendis dolor inventore at? Vitae officia voluptatem tempore reprehenderit ipsam harum sed incidunt accusamus error alias eaque ex, dicta veniam!
-Numquam adipisci necessitatibus, voluptatibus nisi architecto enim, eius illum accusamus aperiam repellendus nostrum deserunt odio fugiat assumenda inventore rem? Obcaecati magnam atque reprehenderit itaque eveniet nisi ipsa minima ex velit?</p>
+    <p class="pindex1"><strong>Ce site est né d’une frustration de ne pas trouver quelque chose du genre sur internet.</strong> </p>
+    </br>
+    <p class="pindex">
+    Je m’appelle Alain, je suis (au moment de la création de ce site) en formation pour devenir développeur Web FullStack. Ce site est mon projet de fin d’année.
+    </p></br>
+    <p class="pindex">
+    Cinéphile depuis mon plus jeune âge, je suis le genre de mec insupportable qui n’arrête pas de conseiller des films à mes amis. Sauf que l’âge avançant je suis de moins en moins curieux, et j’ai bien moins de temps pour choisir quoi regarder le soir et j'aurais bien aimé avoir un site de se genre.
+    </p></br>
+    <p class="pindex">
+    Alors voilà l’idée de ce site, vous conseillez un film, tiré au sort dans une base de données que je remplis manuellement de mes films de cœur. Certains films sont très connus d’autre moins, ils ont tous quelque chose d’intéressant, ils ont tous marqué mon parcours de cinéphile.
+    </p></br>
+    <p class="pindex">
+    Vous pouvez choisir de voir les films par genre, par envie ou par âge.
+    </p></br>
+    <p class="pindex">
+    Les genres sont plutôt classiques.
+    </p></br>
+    <p class="pindex">
+    Les envies ont été choisies arbitrairement, il est possible de débattre des heures sur ce qu’est un Feel good movie ou un film-choc, dite vous qu’il ne s’agît que de mon appréciation, pour vous permettre une sélection un peu plus précise.
+    </p></br>
+    <p class="pindex">
+    Quant à l’âge selon que vous soyez un enfant, un ado (à partir de 15 ans) ou un adulte je vous conseille des films qui (encore une foi selon moi) son regardable, pas forcement appréciable, mais ces films ne devrais pas vous choquer. Cela dit tout le monde est différent et gardez bien à l’esprit que je ne suis pas le classement PEGI et que je peux me tromper.
+    </p></br>
+    <p class="pindex">
+    Voilà en espérant que vous prendrez plaisir à découvrir ou redécouvrir des films sur mes conseils. 
+    </p></br>
+    <p class="sign">
+    <strong> W.M Alain</strong>
+    </p>
 
 </div>
 

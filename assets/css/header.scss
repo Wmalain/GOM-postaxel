@@ -2,6 +2,9 @@ header{
   font-family:"damion", sans-serif;
   font-size: 1.2em; 
 }
+.nav{
+  display: none;
+}
 .logo{
     height: 130 !important;
     width: 283px;
@@ -35,38 +38,30 @@ header{
     list-style-type: none;
     
 }
-.nav{
-    border: 3px solid #F47A60 !important;
-    background-color: #CED7D8;
-    color: #316879;
-    padding: 16px;
-    font-size: 16px;
+.navfiltre{
+    color: #F47A60;
+    font-size: 1.2em;
     text-decoration: none;
-    border-radius: 20%;
-
 }
-.nav:hover {
-    background-color: #F47A60;
-    transition: 0.2s;
+
+.navfiltre:hover {
+    transition: 0.5s;
+    
 
 }
 /* Dropdown Button */
 .dropbtn {
-    border: 3px solid #F47A60 !important;
-    background-color: #CED7D8;
-    color: #316879;
-    padding: 16px;
-    font-size: 16px;
-    border-radius: 20%;
+    color: #F47A60;
+    font-size: 1.2em;
+    text-decoration: none;
   }
   
-  /* The container <div> - needed to position the dropdown content */
   .dropdown {
+    cursor: pointer;
     position: relative;
     display: inline-block;
   }
   
-  /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
     position: absolute;
@@ -95,4 +90,6 @@ header{
   .dropdown:hover .dropdown-content {display: block;}
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #F47A60; transition: 0.2s;  }
+  .dropdown:hover .dropbtn {  
+    transition: 0.2s;
+  }

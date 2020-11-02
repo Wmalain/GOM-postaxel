@@ -41,6 +41,10 @@ if (isset($_POST['btnmodify'])) {
 
                 header('Location:admin.php');
             }
+        } else {
+            echo 'Image trop lourde ou de mauvais format';
         }
+    } else {
+        echo 'Image trop lourde ou de mauvais format';
     }
 }

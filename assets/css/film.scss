@@ -4,7 +4,7 @@ $grey-color: #316879;
 $primary-color: #F47A60;
 $large-screen: 1024px;
 $medium-screen: 780px;
-$small-screen: 500px;
+$small-screen: 576px;
 
 /*---- Global ----*/
 * {
@@ -35,6 +35,17 @@ $small-screen: 500px;
     margin:inherit;
     font-family:"damion", sans-serif;
     font-size: 2em;
+}
+
+.pfunc{
+    width: 100%;
+    margin: 5px auto 0 auto;
+    text-align: center !important;
+    font-family: 'Roboto', sans-serif;
+    color: $grey-color;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:1.2em
 }
 
 html, body { 
@@ -73,11 +84,7 @@ p {
     }
 }
 
-h2 {
-    font-size: 1em;
-    margin-bottom: 15px;
 
-}
 .movie-info{
     margin: auto 10px auto 10px;
     text-align: center;
@@ -86,10 +93,12 @@ h2 {
 
 /*movie-card*/
 .movie-card {
+    box-shadow: 4px 4px 5px 5px $grey-color;
     border: 3px solid $grey-color;
     margin-left : 13%;
     margin-right : 13%;
     margin-top: 50px;
+    margin-bottom: 30px;
     display: grid;
     grid-template-columns: 2fr 400px .5fr 400px 2fr;
     grid-template-areas: '. p . m .';

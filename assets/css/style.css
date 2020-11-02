@@ -3,6 +3,10 @@ header {
   font-size: 1.2em;
 }
 
+.nav {
+  display: none;
+}
+
 .logo {
   height: 130 !important;
   width: 283px;
@@ -35,38 +39,29 @@ header {
   list-style-type: none;
 }
 
-.nav {
-  border: 3px solid #F47A60 !important;
-  background-color: #CED7D8;
-  color: #316879;
-  padding: 16px;
-  font-size: 16px;
+.navfiltre {
+  color: #F47A60;
+  font-size: 1.2em;
   text-decoration: none;
-  border-radius: 20%;
 }
 
-.nav:hover {
-  background-color: #F47A60;
-  transition: 0.2s;
+.navfiltre:hover {
+  transition: 0.5s;
 }
 
 /* Dropdown Button */
 .dropbtn {
-  border: 3px solid #F47A60 !important;
-  background-color: #CED7D8;
-  color: #316879;
-  padding: 16px;
-  font-size: 16px;
-  border-radius: 20%;
+  color: #F47A60;
+  font-size: 1.2em;
+  text-decoration: none;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
+  cursor: pointer;
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -101,7 +96,6 @@ header {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-  background-color: #F47A60;
   transition: 0.2s;
 }
 
@@ -476,6 +470,17 @@ template {
   font-size: 2em;
 }
 
+.pfunc {
+  width: 100%;
+  margin: 5px auto 0 auto;
+  text-align: center !important;
+  font-family: "Roboto", sans-serif;
+  color: #316879;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -500,7 +505,7 @@ p {
   height: 400px;
   width: 283px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
   .affiche {
     height: 200px;
     width: 141px;
@@ -537,11 +542,6 @@ h6 {
   font-family: "damion", sans-serif;
 }
 
-h2 {
-  font-size: 1em;
-  margin-bottom: 15px;
-}
-
 .movie-info {
   margin: auto 10px auto 10px;
   text-align: center;
@@ -550,10 +550,12 @@ h2 {
 
 /*movie-card*/
 .movie-card {
+  box-shadow: 4px 4px 5px 5px #316879;
   border: 3px solid #316879;
   margin-left: 13%;
   margin-right: 13%;
   margin-top: 50px;
+  margin-bottom: 30px;
   display: grid;
   grid-template-columns: 2fr 400px 0.5fr 400px 2fr;
   grid-template-areas: ". p . m .";
@@ -569,7 +571,7 @@ h2 {
     grid-template-areas: ". p ." ". m .";
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
   .movie-card {
     grid-template-columns: 0.5fr 4fr 0.5fr;
     grid-template-areas: ". p ." ". m .";
@@ -583,7 +585,7 @@ h2 {
   position: relative;
   color: #fff;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
   .movie-card .poster-wrapper .poster {
     margin-bottom: 30px;
   }
@@ -625,6 +627,21 @@ h2 {
   font-family: "damion", sans-serif;
   font-size: 1.2em;
   margin: 25px auto 25px auto;
+}
+
+.divform1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-label {
+  text-align: center;
+  font-family: "roboto", sans-serif;
+  font-size: 1.5em;
+  color: #316879;
+  margin-bottom: 25px;
 }
 
 .div1admin {
@@ -740,6 +757,96 @@ h2 {
   color: #F47A60;
 }
 
+@media (max-width: 600px) {
+  .nav {
+    display: inherit;
+    z-index: 1;
+  }
+
+  .navfiltre {
+    margin: 30px 0;
+  }
+
+  .respmenu {
+    margin: 30px 0;
+  }
+
+  li {
+    font-style: none;
+    list-style: none;
+    text-align: center;
+  }
+
+  #nav-check {
+    display: none;
+  }
+
+  .nav2 {
+    display: none;
+  }
+
+  .nav > .nav-btn {
+    display: inline-block;
+    right: 0px;
+    top: 0px;
+  }
+
+  .dropdown-content {
+    margin-top: 15px;
+    display: none;
+    position: absolute;
+    background-color: #316879;
+    width: 50vw;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    font-size: 1.2em;
+  }
+
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+
+  .nav > .nav-btn > label:hover, .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #316879;
+    max-height: 100%;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 210px;
+    left: 0px;
+  }
+
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+/*-- Variables --*/
 .h1form {
   text-align: center;
   font-size: 3em;
@@ -762,10 +869,15 @@ h2 {
   font-size: 1.1em;
   color: #316879;
 }
+@media screen and (max-width: 576px) {
+  .inputform {
+    width: 90%;
+  }
+}
 
 .inputform::placeholder {
   font-family: "Roboto", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.1em;
   color: #316879;
 }
 
@@ -778,13 +890,17 @@ h2 {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   color: #316879;
-  font-size: 13px;
   margin-top: 5px;
+}
+@media screen and (max-width: 576px) {
+  .inputform1 {
+    width: 90%;
+  }
 }
 
 .inputform1::placeholder {
   font-family: "Roboto", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.1em;
   color: #316879;
 }
 
@@ -795,14 +911,18 @@ h2 {
   margin-bottom: 10px;
   width: 30%;
   box-sizing: border-box;
-  font-family: montserrat;
+  font-family: "Roboto", sans-serif;
   color: #316879;
-  font-size: 13px;
+}
+@media screen and (max-width: 576px) {
+  .inputform2 {
+    width: 90%;
+  }
 }
 
 .inputform2::placeholder {
   font-family: "Roboto", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.1em;
   color: #316879;
 }
 
@@ -819,12 +939,45 @@ h2 {
   box-sizing: border-box;
   color: #316879;
 }
+@media screen and (max-width: 576px) {
+  .inputbtn {
+    width: 40%;
+  }
+}
 
 .indexcard {
-  margin: 2% 25%;
+  margin: 20px 10% 20px 10%;
   border: 1px solid #316879;
-  padding: 3% 2%;
+  padding: 1% 2%;
   font-family: "Roboto", sans-serif;
+  box-shadow: 4px 4px 5px 5px #316879;
+}
+
+.h1ind {
+  margin: 0 auto 5px auto;
+  text-align: center;
+  font-size: 3em;
+}
+
+.pindex1 {
+  font-family: "Roboto", sans-serif;
+  color: #316879;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.pindex {
+  font-family: "Roboto", sans-serif;
+  color: #316879;
+}
+
+.sign {
+  font-family: "damion", sans-serif;
+  color: #F47A60;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: right;
+  margin-right: 3%;
 }
 
 /*# sourceMappingURL=style.css.map */

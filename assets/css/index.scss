@@ -1,7 +1,32 @@
 .indexcard{
-    margin: 2% 25%;
+    margin: 20px 10% 20px 10%;
     border: 1px solid #316879;
-    padding: 3% 2%;
+    padding: 1% 2% ;
     font-family: 'Roboto', sans-serif;
+    box-shadow: 4px 4px 5px 5px $grey-color;
+}
+.h1ind{
+    margin: 0 auto 5px auto;
+    text-align: center;
+    font-size: 3em;
+}
+.pindex1{
+    font-family: 'Roboto', sans-serif;
+    color: #316879;
+    text-align: center;
+    font-size: 1.2em;
+}
+.pindex{
+    font-family: 'Roboto', sans-serif;
+    color: #316879;
+}
+
+.sign{
+    font-family: 'damion', sans-serif;
+    color: #F47A60;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: right;
+    margin-right: 3%;
 
 }
