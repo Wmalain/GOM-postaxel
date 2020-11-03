@@ -729,8 +729,15 @@ h6 {
   color: #F47A60;
 }
 
+.tabl {
+  border: 1px solid #F47A60 !important;
+  margin: auto 15%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 500px) {
-  .tab {
+  .tabl {
     font-size: 0.5em;
   }
 }

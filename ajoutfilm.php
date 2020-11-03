@@ -115,6 +115,8 @@ if (isset($_POST['submit-signup'])) {
         <input type="file" name="photo" id="photo" class="inputform2" accept=".png,.jpeg,.jpg,.gif">
     </div>
     <input type="submit" name="submit-signup" class="inputbtn" value="Ajouter">
+    <button id="refresh" onclick="document.location.reload(false)" class="btnreload"> Rafraichir </button>
+
 </form>
 
 

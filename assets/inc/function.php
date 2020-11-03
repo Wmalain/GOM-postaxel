@@ -182,7 +182,6 @@ function displaymovieage($id)
           </div>
           <div class="btn">
             <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
-            <button id="refresh" onclick="document.location.reload(false)" class="btnreload"> Rafraichir </button>
           </div>
 
         </div>
@@ -212,7 +211,7 @@ function searchmovie()
                 ?>
 
 </br>
-    <div class="tab">
+    <div class="tabl">
       <table class="tabgen">
         <tr>
           <td> <p class="tabmov1"> <?php echo $row['titre']; ?> </p></td> 

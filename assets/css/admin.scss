@@ -85,7 +85,14 @@ $small-screen: 500px;
     color: #F47A60;
 
 }    
-.tab{
+
+.tabl{
+    border: 1px solid #F47A60 !important;
+    margin: auto 15%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    
     @media screen and (max-width: $small-screen) {
         font-size:0.5em;
 
