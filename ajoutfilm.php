@@ -40,7 +40,6 @@ if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
                     $sth->bindValue(':id_date', $id_date);
 
                     $sth->execute();
-                    header('Location:ajoutfilm.php');
                 }
             }
         } else {
@@ -129,5 +128,6 @@ if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
     </div>
   <?php
     }
+
 require 'assets/inc/footer.php';
 ?> 

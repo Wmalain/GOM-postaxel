@@ -1,8 +1,7 @@
 <?php
 require 'assets/inc/connect.php';
-require 'assets/inc/function.php';
 require 'assets/inc/head.php';
-
+require 'assets/inc/function.php';
 ?>
 
 <header>

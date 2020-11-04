@@ -1,6 +1,8 @@
 <?php
 
-require 'assets/inc/header.php';
+require 'assets/inc/connect.php';
+require 'assets/inc/head.php';
+require 'assets/inc/function.php';
 if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
     $id = $_GET['id'];
 
