@@ -1,11 +1,10 @@
 <?php
 require 'assets/inc/header.php';
+if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
+    $id = $_GET['id'];
 
-$id = $_GET['id'];
-
-$sql = $db->query("SELECT * FROM movie LEFT JOIN age ON movie.id_age = age.id LEFT JOIN date ON movie.id_date = date.id LEFT JOIN genre_de_film ON movie.id_genre = genre_de_film.id LEFT JOIN type_de_film ON movie.id_type1 = type_de_film.id  WHERE movie.id = {$id}");
-$mov = $sql->fetch();
-?>
+    $sql = $db->query("SELECT * FROM movie LEFT JOIN age ON movie.id_age = age.id LEFT JOIN date ON movie.id_date = date.id LEFT JOIN genre_de_film ON movie.id_genre = genre_de_film.id LEFT JOIN type_de_film ON movie.id_type1 = type_de_film.id  WHERE movie.id = {$id}");
+    $mov = $sql->fetch(); ?>
 
 
 <form action="modify_movie_post.php" method="post" enctype="multipart/form-data" class="form">
@@ -79,18 +78,19 @@ $mov = $sql->fetch();
     <input type="hidden" name="id" class="inputbtn" value="<?php echo $id; ?> ">
     <input type="submit" name="btnmodify" class="inputbtn" value="Modifier le film">
 </form>
-
-
-
-
-
-
-
-
-
+<div class="retourgen">
+<a href="admin.php" type="submit" class="inputbtn retour">Retour</a>
+</div>
 
 
 <?php
+} else {
+        ?>
+    <div class="diverreur">
+        <p class="perreur">veuillez vous connecter pour avoir accés a cette page</p>
+        <a href="admin.php" type="submit" class="inputbtn retour">Retour</a>
+    </div>
+  <?php
+    }
 require 'assets/inc/footer.php';
-
 ?> 

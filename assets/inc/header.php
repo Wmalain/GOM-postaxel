@@ -73,7 +73,9 @@ require 'assets/inc/head.php';
 
 
 <ul class="nav2">
-    <li> <a class="navfiltre" href="no_filtre.php">Sans Filtre</a> </li>
+    <div class="navfiltre1">
+        <li> <a class="navfiltre" href="no_filtre.php">Sans Filtre</a> </li>
+    </div>
 
     <li> <div class="dropdown">
         <a class="dropbtn">Par Genre</a>

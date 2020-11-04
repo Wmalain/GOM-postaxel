@@ -11,6 +11,8 @@
     }
     .respmenu{
         margin: 30px 0;
+        font-weight: bold;
+
     }
     li{ 
         font-style: none;
@@ -31,13 +33,15 @@
     }
 
     .dropdown-content {
+        position: inherit;
+        font-weight: normal;
         margin-top:15px;
         display: none;
         background-color: #316879;
-        width: 50vw;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: inherit;
         z-index: 1;
         font-size: 1.2em;
+        opacity: 0.90;
       }
       
     .nav > .nav-btn > label {
@@ -46,9 +50,12 @@
       height: 50px;
       padding: 13px;
     }
+
     .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
       background-color: rgba(0, 0, 0, 0.3);
     }
+  
+
     .nav > .nav-btn > label > span {
       display: block;
       width: 25px;

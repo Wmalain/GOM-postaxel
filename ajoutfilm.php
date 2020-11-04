@@ -1,52 +1,52 @@
 <?php
 require 'assets/inc/header.php';
 
-if (isset($_POST['submit-signup'])) {
-    $titre = htmlspecialchars($_POST['titre']);
-    $realisateur = htmlspecialchars($_POST['real']);
-    $synopsis = htmlspecialchars($_POST['synopsis']);
-    $photo = $_FILES['photo'];
-    $lien = htmlspecialchars($_POST['lien']);
-    $id_genre = htmlspecialchars($_POST['genre']);
-    $id_age = htmlspecialchars($_POST['age']);
-    $id_type1 = htmlspecialchars($_POST['ee1']);
-    $id_date = htmlspecialchars($_POST['decenie']);
+if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
+    if (isset($_POST['submit-signup'])) {
+        $titre = htmlspecialchars($_POST['titre']);
+        $realisateur = htmlspecialchars($_POST['real']);
+        $synopsis = htmlspecialchars($_POST['synopsis']);
+        $photo = $_FILES['photo'];
+        $lien = htmlspecialchars($_POST['lien']);
+        $id_genre = htmlspecialchars($_POST['genre']);
+        $id_age = htmlspecialchars($_POST['age']);
+        $id_type1 = htmlspecialchars($_POST['ee1']);
+        $id_date = htmlspecialchars($_POST['decenie']);
 
-    if ($photo['size'] <= 9000000) {
-        // vérification pour la photo, poid et format
-        $valid_ext = ['jpg', 'jpeg', 'gif', 'png', 'webp'];
-        $check_ext = strtolower(substr(strrchr($photo['name'], '.'), 1));
+        if ($photo['size'] <= 9000000) {
+            // vérification pour la photo, poid et format
+            $valid_ext = ['jpg', 'jpeg', 'gif', 'png', 'webp'];
+            $check_ext = strtolower(substr(strrchr($photo['name'], '.'), 1));
 
-        if (in_array($check_ext, $valid_ext)) {
-            // dossier d'upload de la photo et nom définitif de cette derniere
-            $imgname = uniqid().'_'.$photo['name'];
-            $upload_dir = './assets/uploads/';
-            $upload_name = $upload_dir.$imgname;
-            $move_result = move_uploaded_file($photo['tmp_name'], $upload_name);
+            if (in_array($check_ext, $valid_ext)) {
+                // dossier d'upload de la photo et nom définitif de cette derniere
+                $imgname = uniqid().'_'.$photo['name'];
+                $upload_dir = './assets/uploads/';
+                $upload_name = $upload_dir.$imgname;
+                $move_result = move_uploaded_file($photo['tmp_name'], $upload_name);
 
-            if ($move_result) {
-                // si la photo est uploadé alors ajoute les informations dans la table movie
+                if ($move_result) {
+                    // si la photo est uploadé alors ajoute les informations dans la table movie
 
-                $sth = $db->prepare('INSERT INTO movie(titre, realisateur, synopsis, lien, affiche, id_genre, id_age, id_type1, id_date) VALUES (:titre,:realisateur, :synopsis, :lien, :photo, :id_genre, :id_age, :id_type1, :id_date)');
-                $sth->bindValue(':titre', $titre);
-                $sth->bindValue(':realisateur', $realisateur);
-                $sth->bindValue(':synopsis', $synopsis);
-                $sth->bindValue(':lien', $lien);
-                $sth->bindValue(':photo', $imgname);
-                $sth->bindValue(':id_genre', $id_genre);
-                $sth->bindValue(':id_age', $id_age);
-                $sth->bindValue(':id_type1', $id_type1);
-                $sth->bindValue(':id_date', $id_date);
+                    $sth = $db->prepare('INSERT INTO movie(titre, realisateur, synopsis, lien, affiche, id_genre, id_age, id_type1, id_date) VALUES (:titre,:realisateur, :synopsis, :lien, :photo, :id_genre, :id_age, :id_type1, :id_date)');
+                    $sth->bindValue(':titre', $titre);
+                    $sth->bindValue(':realisateur', $realisateur);
+                    $sth->bindValue(':synopsis', $synopsis);
+                    $sth->bindValue(':lien', $lien);
+                    $sth->bindValue(':photo', $imgname);
+                    $sth->bindValue(':id_genre', $id_genre);
+                    $sth->bindValue(':id_age', $id_age);
+                    $sth->bindValue(':id_type1', $id_type1);
+                    $sth->bindValue(':id_date', $id_date);
 
-                $sth->execute();
-                header('Location:ajoutfilm.php');
+                    $sth->execute();
+                    header('Location:ajoutfilm.php');
+                }
             }
+        } else {
+            echo 'Image trop lourde ou de mauvais format';
         }
-    } else {
-        echo 'Image trop lourde ou de mauvais format';
-    }
-}
-?>
+    } ?>
 
 <form action="ajoutfilm.php" method="post" enctype="multipart/form-data" class="form">
     <h1 class="h1form">Ajouter un Film</h1>
@@ -115,11 +115,19 @@ if (isset($_POST['submit-signup'])) {
         <input type="file" name="photo" id="photo" class="inputform2" accept=".png,.jpeg,.jpg,.gif">
     </div>
     <input type="submit" name="submit-signup" class="inputbtn" value="Ajouter">
-    <button id="refresh" onclick="document.location.reload(false)" class="btnreload"> Rafraichir </button>
 
 </form>
-
-
+<div class="retourgen">
+<a href="admin.php" type="submit" class="inputbtn retour">Retour</a>
+</div>
 <?php
+} else {
+        ?>
+    <div class="diverreur">
+        <p class="perreur">veuillez vous connecter pour avoir accés a cette page</p>
+        <a href="admin.php" type="submit" class="inputbtn retour">Retour</a>
+    </div>
+  <?php
+    }
 require 'assets/inc/footer.php';
 ?> 

@@ -1,5 +1,9 @@
+@font-face {
+  font-family: "damion";
+  src: url("../fonts/Damion-Regular.ttf");
+}
 header {
-  font-family: "damion", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.2em;
 }
 
@@ -41,18 +45,19 @@ header {
 
 .navfiltre {
   color: #F47A60;
-  font-size: 1.2em;
+  font-size: 1.5em;
   text-decoration: none;
 }
 
-.navfiltre:hover {
+.navfiltre1:hover {
+  margin-bottom: 15px;
   transition: 0.5s;
 }
 
 /* Dropdown Button */
 .dropbtn {
   color: #F47A60;
-  font-size: 1.2em;
+  font-size: 1.5em;
   text-decoration: none;
 }
 
@@ -62,6 +67,11 @@ header {
   display: inline-block;
 }
 
+.dropdown:hover {
+  margin-bottom: 15px;
+  transition: 0.5s;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -69,6 +79,7 @@ header {
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  font-size: 0.9em;
 }
 
 .dropdown-content a:hover {
@@ -463,6 +474,11 @@ template {
   font-family: "damion", sans-serif;
   font-size: 4em;
 }
+@media screen and (max-width: 576px) {
+  .h1film {
+    font-size: 2em;
+  }
+}
 
 .h2film {
   text-align: center !important;
@@ -480,6 +496,11 @@ template {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2em;
+}
+@media screen and (max-width: 576px) {
+  .pfunc {
+    font-size: 0.8em;
+  }
 }
 
 html, body {
@@ -605,6 +626,7 @@ h6 {
 .movie-card .btn {
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
 }
 .movie-card #refresh {
   text-align: center !important;
@@ -629,6 +651,7 @@ h6 {
 
 .relaunch {
   width: 100%;
+  cursor: pointer;
 }
 
 .btnrandom {
@@ -642,6 +665,22 @@ h6 {
   font-family: "damion", sans-serif;
   font-size: 1.2em;
   margin: 25px auto 25px auto;
+}
+
+#refresh {
+  cursor: pointer;
+}
+
+.diverreur {
+  width: 100vw;
+  text-align: center;
+}
+
+.perreur {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-size: 1em;
 }
 
 .divform1 {
@@ -672,6 +711,11 @@ h6 {
 
 .search {
   text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .search {
+    font-size: 0.5em;
+  }
 }
 
 .search1 {
@@ -730,15 +774,13 @@ h6 {
 }
 
 .tabl {
-  border: 1px solid #F47A60 !important;
-  margin: auto 15%;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
+  border: 2px solid #F47A60 !important;
+  margin: auto 20%;
 }
 @media screen and (max-width: 500px) {
   .tabl {
-    font-size: 0.5em;
+    font-size: 0.8em;
+    margin: auto 5%;
   }
 }
 
@@ -759,11 +801,11 @@ h6 {
 }
 
 .tabmov1 {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .tabmov2 {
-  font-size: 1.5em;
+  font-size: 1em;
   margin: 0 10px 0 20px;
 }
 
@@ -773,10 +815,21 @@ h6 {
   margin-right: 30px;
   padding-left: 30px;
 }
+@media screen and (max-width: 500px) {
+  .btnad1 {
+    font-size: 0.8em;
+  }
+}
 
 .btnad2 {
   font-size: 1.5em;
   color: #F47A60;
+}
+@media screen and (max-width: 500px) {
+  .btnad2 {
+    font-size: 0.8em;
+    margin: auto 5%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -791,6 +844,7 @@ h6 {
 
   .respmenu {
     margin: 30px 0;
+    font-weight: bold;
   }
 
   li {
@@ -814,13 +868,15 @@ h6 {
   }
 
   .dropdown-content {
+    position: inherit;
+    font-weight: normal;
     margin-top: 15px;
     display: none;
     background-color: #316879;
-    width: 50vw;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inherit;
     z-index: 1;
     font-size: 1.2em;
+    opacity: 0.9;
   }
 
   .nav > .nav-btn > label {
@@ -868,6 +924,11 @@ h6 {
   }
 }
 /*-- Variables --*/
+.retourgen {
+  width: 100%;
+  text-align: center;
+}
+
 .h1form {
   text-align: center;
   font-size: 3em;

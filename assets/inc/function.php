@@ -182,6 +182,7 @@ function displaymovieage($id)
           </div>
           <div class="btn">
             <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
+            <button id="refresh" onclick="document.location.reload(false)" class="btnreload"> Rafraichir </button>
           </div>
 
         </div>

@@ -30,12 +30,16 @@ $small-screen: 576px;
     padding-top: 20px;
     font-family:"damion", sans-serif;
     font-size: 4em;
+    @media screen and (max-width: $small-screen) {
+        font-size: 2em;
+    }
 }
 .h2film{
     text-align: center !important;
     margin:inherit;
     font-family:"damion", sans-serif;
     font-size: 2em;
+    
 }
 
 .pfunc{
@@ -46,7 +50,10 @@ $small-screen: 576px;
     color: $grey-color;
     text-decoration: none;
     font-weight: bold;
-    font-size:1.2em
+    font-size:1.2em;
+    @media screen and (max-width: $small-screen) {
+        font-size: 0.8em;
+    }
 }
 
 html, body { 
@@ -145,6 +152,7 @@ p {
     .btn{
         display:flex;
         justify-content:space-around;
+        flex-direction: column;
     }
 
 
@@ -177,6 +185,8 @@ p {
 
     .relaunch{
         width: 100%;
+        cursor: pointer;
+
     }
 
     .btnrandom{
@@ -191,4 +201,6 @@ p {
         font-size:1.2em;
         margin: 25px auto 25px auto;
     }
-
+#refresh{
+    cursor: pointer;
+}

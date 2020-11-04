@@ -1,6 +1,17 @@
 $large-screen: 1024px;
 $medium-screen: 780px;
 $small-screen: 500px;
+.diverreur{
+    width: 100vw;
+    text-align: center;
+}
+
+.perreur{
+    text-align: center;
+    margin-top:100px;
+    margin-bottom:50px;
+    font-size: 1em;
+}
 
 .divform1{
     display: flex;
@@ -28,6 +39,10 @@ $small-screen: 500px;
 
 .search{
     text-align: center;
+    @media screen and (max-width: $small-screen) {
+        font-size:0.5em;
+
+    }
 
 }
 
@@ -87,14 +102,11 @@ $small-screen: 500px;
 }    
 
 .tabl{
-    border: 1px solid #F47A60 !important;
-    margin: auto 15%;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    
+    border: 2px solid #F47A60 !important;
+    margin: auto 20%;
     @media screen and (max-width: $small-screen) {
-        font-size:0.5em;
+        font-size:0.8em;
+        margin: auto 5%;
 
     }
 }
@@ -118,11 +130,11 @@ $small-screen: 500px;
 }
 
 .tabmov1{
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .tabmov2{
-    font-size: 1.5em;
+    font-size: 1em;
     margin: 0 10px 0 20px;
 }
 
@@ -131,8 +143,17 @@ $small-screen: 500px;
     color: #F47A60;
     margin-right: 30px;
     padding-left: 30px;
+    @media screen and (max-width: $small-screen) {
+        font-size:0.8em;
+
+    }
 }
 .btnad2{
     font-size: 1.5em;
     color: #F47A60;
+    @media screen and (max-width: $small-screen) {
+        font-size:0.8em;
+        margin: auto 5%;
+
+    }
 }
