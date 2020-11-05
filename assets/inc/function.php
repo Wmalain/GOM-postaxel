@@ -11,7 +11,7 @@ function displaymovie()
         ?>
         <div class="divtit"> 
           <h1 class="h1film"> Quel film voir ce soir ?</h1>
-          <p class="pfunc">Film choisi au <strong> hasard </strong> dans une base de donné</p>
+          <p class="pfunc">Film choisi au <strong> hasard </strong> dans une base de données</p>
         </div>
         <div class="movie-card">
         <div class="poster-wrapper">
@@ -31,7 +31,7 @@ function displaymovie()
         
           <div class="synopsis-section">
             <h2>SYNOPSIS</h2>
-            <p>
+            <p class="synop">
             <?php echo $row['synopsis']; ?>
             </p>
           </div>
@@ -59,7 +59,7 @@ function displaymoviegenre($id)
         ?>
         <div class="divtit"> 
           <h1 class="h1film"> Quel film voir ce soir ?</h1>
-          <p class="pfunc">Film choisi au <strong> hasard </strong> dans une base de donné selon son genre</p>
+          <p class="pfunc">Film choisi au <strong> hasard </strong> dans une base de données selon son genre</p>
         </div>
    <div class="movie-card">
         <div class="poster-wrapper">
@@ -79,7 +79,7 @@ function displaymoviegenre($id)
         
           <div class="synopsis-section">
             <h2>SYNOPSIS</h2>
-            <p>
+            <p class="synop">
             <?php echo $row['synopsis']; ?>
             </p>
           </div>
@@ -108,7 +108,7 @@ function displaymovieenvie($id)
         ?>
         <div class="divtit"> 
           <h1 class="h1film"> Quel film voir ce soir ?</h1>
-          <p class="pfunc">Film choisi au <strong> hasard </strong> dans une base de donné <strong> selon vos envies</strong></p>
+          <p class="pfunc">Film choisi au <strong> hasard </strong> dans une base de données <strong> selon vos envies</strong></p>
         </div>
  <div class="movie-card">
         <div class="poster-wrapper">
@@ -128,7 +128,7 @@ function displaymovieenvie($id)
         
           <div class="synopsis-section">
             <h2>SYNOPSIS</h2>
-            <p>
+            <p class="synop">
             <?php echo $row['synopsis']; ?>
             </p>
           </div>
@@ -156,7 +156,7 @@ function displaymovieage($id)
         ?>
         <div class="divtit"> 
           <h1 class="h1film"> Quel film voir ce soir ?</h1>
-          <p class="pfunc">Film choisi au <strong> hasard </strong> dans une base de donné <strong> selon votre age</strong></p>
+          <p class="pfunc">Film choisi au <strong> hasard </strong> dans une base de données <strong> selon votre age</strong></p>
         </div>
 <div class="movie-card">
         <div class="poster-wrapper">
@@ -176,7 +176,7 @@ function displaymovieage($id)
         
           <div class="synopsis-section">
             <h2>SYNOPSIS</h2>
-            <p>
+            <p class="synop">
             <?php echo $row['synopsis']; ?>
             </p>
           </div>

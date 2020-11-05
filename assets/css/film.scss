@@ -18,11 +18,25 @@ $small-screen: 576px;
     box-sizing: border-box;
 }
 
-.divtit{
-    width:100%;
-
+html, body { 
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    color: $grey-color;
 }
 
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    line-height: 20px;
+    margin : 0 2% 0 2%;
+}
+
+// gestion des titres de la card
+    .divtit{
+        width:100%;
+    }
+    
 .h1film{
     text-align: center !important;
     margin:inherit;
@@ -30,16 +44,21 @@ $small-screen: 576px;
     padding-top: 20px;
     font-family:"damion", sans-serif;
     font-size: 4em;
+
     @media screen and (max-width: $small-screen) {
         font-size: 2em;
     }
 }
+
 .h2film{
     text-align: center !important;
     margin:inherit;
     font-family:"damion", sans-serif;
     font-size: 2em;
-    
+}
+
+.titrefilm{
+    font-size:2em;
 }
 
 .pfunc{
@@ -53,34 +72,21 @@ $small-screen: 576px;
     font-size:1.2em;
     @media screen and (max-width: $small-screen) {
         font-size: 0.8em;
+        text-align: justify;
     }
 }
-
-html, body { 
-    height: 100%;
-    width: 100%;
-    background-color: #fff;
-    color: $grey-color;
-    
-}
-
-p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 20px;
-}
-
-.titrefilm{
-    font-size:2em;
+// gestion des paragraphes
+.synop{
+    text-align: justify;
 }
 
 .affiche {
-    
     width: 90%;
     margin-top: 15%;
     margin-bottom: 15%;
     height: 500px;
     width: 354px;
+   
     @media screen and (max-width: $small-screen) {
         height: 200px;
         width: 141px;
@@ -88,12 +94,12 @@ p {
 }
 
 @for $index from 1 through 6 {
+
     h#{$index}{
       color: $primary-color;
       font-family:"damion", sans-serif;
     }
 }
-
 
 .movie-info{
     margin: auto 10px auto 10px;
@@ -101,7 +107,7 @@ p {
     padding-bottom: 25px;
 }
 
-/*movie-card*/
+// gestion général de la card
 .movie-card {
     box-shadow: 4px 4px 5px 5px $grey-color;
     border: 3px solid $grey-color;
@@ -112,31 +118,36 @@ p {
     display: grid;
     grid-template-columns: 2fr 400px .5fr 400px 2fr;
     grid-template-areas: '. p . m .';
+
     @media screen and (max-width: $large-screen) {
         grid-template-columns: 1fr 4fr 1fr 4fr 1fr;
     }
+
     @media screen and (max-width: $medium-screen) {
         grid-template-columns: 1fr 4fr 1fr;
         grid-template-areas: '. p .'
                              '. m .';
     }
+
     @media screen and (max-width: $small-screen) {
         grid-template-columns: .5fr 4fr .5fr;
         grid-template-areas: '. p .'
                              '. m .';
     }
+
     .poster-wrapper {
         grid-area: p;
         .poster {
             text-align: center;
             align-items:center;
             color: #fff;
+
             @media screen and (max-width: $small-screen) {
                 margin-bottom: 30px;
             }
-
         }
     }
+    
     .btnimdb{
         text-align: center !important;
         border: 3px solid #316879;
@@ -146,7 +157,7 @@ p {
         font-size: 16px;
         font-family:"damion", sans-serif;
         font-size:1.2em;
-        margin-bottom:20px;
+        margin: 20px 5% 20px 5%;
     }
 
     .btn{
@@ -165,13 +176,12 @@ p {
         font-size: 16px;
         font-family:"damion", sans-serif;
         font-size:1.2em;
-        margin-bottom:20px;
+        margin: 20px 5% 20px 5%;
     }
-
-
 
     .movie-info {
         grid-area: m;
+
         &>div {
             margin-bottom: 30px;
         }
@@ -189,18 +199,6 @@ p {
 
     }
 
-    .btnrandom{
-        text-align: center;
-        border: 3px solid #316879;
-        background-color: #F47A60;
-        color: #316879;
-        padding: 16px;
-        font-size: 16px;
-        border-radius: 20%;
-        font-family:"damion", sans-serif;
-        font-size:1.2em;
-        margin: 25px auto 25px auto;
-    }
 #refresh{
     cursor: pointer;
 }

@@ -1,6 +1,9 @@
 $large-screen: 1024px;
 $medium-screen: 780px;
 $small-screen: 500px;
+
+
+// erreur si l'utlisateur n'est pas connecté
 .diverreur{
     width: 100vw;
     text-align: center;
@@ -10,65 +13,11 @@ $small-screen: 500px;
     text-align: center;
     margin-top:100px;
     margin-bottom:50px;
-    font-size: 1em;
-}
-
-.divform1{
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-}
-
-.search-label{
-    text-align: center;
-    font-family: "roboto", sans-serif;
     font-size: 1.5em;
-    color: #316879;
-    margin-bottom: 25px;
+    font-family: 'Roboto', sans-serif;
+    color:#316879; 
 }
-.div1admin{
-    margin: 2% auto 5% auto;
-    text-align: center;
-} 
-.aadmin{
-    font-size:3em;
-    padding:0px 5% 0px 5%;
-    color: #F47A60;
-}
-
-.search{
-    text-align: center;
-    @media screen and (max-width: $small-screen) {
-        font-size:0.5em;
-
-    }
-
-}
-
-.search1{
-    border: 1px solid #F47A60;
-    font-family: "damion", sans-serif;
-    color: #F47A60 !important;
-    font-size: 2em;
-    padding: 5px;
-    text-align: center;
-}
-.search1::placeholder{
-    color: #F47A60;
-
-}    
-.search2{
-    font-size: 1.5em;
-    border: 1px solid #F47A60;
-    background-color: #316879;
-    font-family: "damion", sans-serif;
-    text-align: center;
-    color: #F47A60;
-    padding: 9px;
-    margin-left: 10px;
-}
-
+// section connexion qui disparait une foi connecté
 .formcon{
     text-align: center;
     margin-top: 25px;
@@ -85,8 +34,8 @@ $small-screen: 500px;
 
 .formheadconnect::placeholder{
     color: #F47A60;
-
 }    
+
 .formheadconnect2{
     border: 1px solid #F47A60;
     font-family: "damion", sans-serif;
@@ -98,16 +47,74 @@ $small-screen: 500px;
 
 .formheadconnect2::placeholder{
     color: #F47A60;
-
 }    
 
+//section ajout film et déconnexion
+.div1admin{
+    margin: 2% auto 5% auto;
+    text-align: center;
+} 
+.aadmin{
+    font-size:3em;
+    padding:0px 5% 0px 5%;
+    color: #F47A60;
+}
+
+// section barre de recherche
+.divform1{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.search-label{
+    text-align: center;
+    font-family: "roboto", sans-serif;
+    font-size: 1.5em;
+    color: #316879;
+    margin-bottom: 25px;
+}
+
+.search{
+    text-align: center;
+    @media screen and (max-width: $small-screen) {
+        font-size:0.5em;
+    }
+}
+
+.search1{
+    border: 1px solid #F47A60;
+    font-family: "damion", sans-serif;
+    color: #F47A60 !important;
+    font-size: 2em;
+    padding: 5px;
+    text-align: center;
+}
+
+.search1::placeholder{
+    color: #F47A60;
+}
+
+.search2{
+    font-size: 1.5em;
+    border: 1px solid #F47A60;
+    background-color: #316879;
+    font-family: "damion", sans-serif;
+    text-align: center;
+    color: #F47A60;
+    padding: 9px;
+    margin-left: 10px;
+}
+
+//section résultat de la recherche
 .tabl{
     border: 2px solid #F47A60 !important;
     margin: auto 20%;
+    
     @media screen and (max-width: $small-screen) {
         font-size:0.8em;
         margin: auto 5%;
-
     }
 }
 
@@ -120,9 +127,7 @@ $small-screen: 500px;
     color: #F47A60;
     padding: 9px;
     margin-left: 10px;
-    
 }
-
 
 .tabgen{
     padding:5px 10%;
@@ -143,17 +148,17 @@ $small-screen: 500px;
     color: #F47A60;
     margin-right: 30px;
     padding-left: 30px;
+
     @media screen and (max-width: $small-screen) {
         font-size:0.8em;
-
     }
 }
 .btnad2{
     font-size: 1.5em;
     color: #F47A60;
+
     @media screen and (max-width: $small-screen) {
         font-size:0.8em;
         margin: auto 5%;
-
     }
 }

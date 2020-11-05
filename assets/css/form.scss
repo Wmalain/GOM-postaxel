@@ -4,6 +4,8 @@ $primary-color: #F47A60;
 $large-screen: 1024px;
 $medium-screen: 780px;
 $small-screen: 576px;
+
+//mise en forme du formulaire
 .retourgen{
     width: 100%;
     text-align: center;
@@ -30,10 +32,10 @@ $small-screen: 576px;
         font-family: 'Roboto', sans-serif;
         font-size: 1.1em;
         color: #316879;
+
         @media screen and (max-width: 720px) {
             width:90%;
         }
-    
     }
 
 .inputform::placeholder{
@@ -52,10 +54,10 @@ $small-screen: 576px;
         font-family: 'Roboto', sans-serif;
         color: #316879;
         margin-top: 5px;
+
         @media screen and (max-width: 720px) {
             width:90%;
         }
-    
     }
 
 .inputform1::placeholder{
@@ -73,6 +75,7 @@ $small-screen: 576px;
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
         color: #316879;
+
         @media screen and (max-width: 720px) {
             width:90%;
         }
@@ -96,8 +99,8 @@ $small-screen: 576px;
     width: 15%;
     box-sizing: border-box;
     color: #316879 ;
+
     @media screen and (max-width: 720px) {
         width:40%;
     }
-    
 }

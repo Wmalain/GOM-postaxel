@@ -15,7 +15,7 @@ if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
     ?>
     <div class="diverreur">
         <p class="perreur">veuillez vous connecter pour avoir accés a cette page</p>
-        <a href="admin.php" type="submit" class="inputbtn retour">Retour</a>
+        <a href="index.php" type="submit" class="inputbtn retour">Retour</a>
     </div>
   <?php
 }

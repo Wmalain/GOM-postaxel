@@ -54,7 +54,6 @@ header {
   transition: 0.5s;
 }
 
-/* Dropdown Button */
 .dropbtn {
   color: #F47A60;
   font-size: 1.5em;
@@ -88,7 +87,6 @@ header {
   transition: 0.5s;
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
   color: #F47A60;
   padding: 12px 16px;
@@ -96,17 +94,16 @@ header {
   display: block;
 }
 
-/* Change color of dropdown links on hover */
+/* dropdown hover */
 .dropdown-content a:hover {
   background-color: #316879;
 }
 
-/* Show the dropdown menu on hover */
+/* contenu dropdown hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   transition: 0.2s;
 }
@@ -463,6 +460,20 @@ template {
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  color: #316879;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  line-height: 20px;
+  margin: 0 2% 0 2%;
+}
+
 .divtit {
   width: 100%;
 }
@@ -488,6 +499,10 @@ template {
   font-size: 2em;
 }
 
+.titrefilm {
+  font-size: 2em;
+}
+
 .pfunc {
   width: 100%;
   margin: 5px auto 0 auto;
@@ -501,24 +516,12 @@ template {
 @media screen and (max-width: 576px) {
   .pfunc {
     font-size: 0.8em;
+    text-align: justify;
   }
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-  background-color: #fff;
-  color: #316879;
-}
-
-p {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.titrefilm {
-  font-size: 2em;
+.synop {
+  text-align: justify;
 }
 
 .affiche {
@@ -571,7 +574,6 @@ h6 {
   padding-bottom: 25px;
 }
 
-/*movie-card*/
 .movie-card {
   box-shadow: 4px 4px 5px 5px #316879;
   border: 3px solid #316879;
@@ -622,7 +624,7 @@ h6 {
   font-size: 16px;
   font-family: "damion", sans-serif;
   font-size: 1.2em;
-  margin-bottom: 20px;
+  margin: 20px 5% 20px 5%;
 }
 .movie-card .btn {
   display: flex;
@@ -638,7 +640,7 @@ h6 {
   font-size: 16px;
   font-family: "damion", sans-serif;
   font-size: 1.2em;
-  margin-bottom: 20px;
+  margin: 20px 5% 20px 5%;
 }
 .movie-card .movie-info {
   grid-area: m;
@@ -655,19 +657,6 @@ h6 {
   cursor: pointer;
 }
 
-.btnrandom {
-  text-align: center;
-  border: 3px solid #316879;
-  background-color: #F47A60;
-  color: #316879;
-  padding: 16px;
-  font-size: 16px;
-  border-radius: 20%;
-  font-family: "damion", sans-serif;
-  font-size: 1.2em;
-  margin: 25px auto 25px auto;
-}
-
 #refresh {
   cursor: pointer;
 }
@@ -681,7 +670,51 @@ h6 {
   text-align: center;
   margin-top: 100px;
   margin-bottom: 50px;
-  font-size: 1em;
+  font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+  color: #316879;
+}
+
+.formcon {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.formheadconnect {
+  border: 1px solid #F47A60;
+  font-family: "damion", sans-serif;
+  color: #F47A60 !important;
+  font-size: 2em;
+  padding: 5px;
+  text-align: center;
+}
+
+.formheadconnect::placeholder {
+  color: #F47A60;
+}
+
+.formheadconnect2 {
+  border: 1px solid #F47A60;
+  font-family: "damion", sans-serif;
+  color: #F47A60 !important;
+  font-size: 2em;
+  padding: 5px;
+  text-align: center;
+}
+
+.formheadconnect2::placeholder {
+  color: #F47A60;
+}
+
+.div1admin {
+  margin: 2% auto 5% auto;
+  text-align: center;
+}
+
+.aadmin {
+  font-size: 3em;
+  padding: 0px 5% 0px 5%;
+  color: #F47A60;
 }
 
 .divform1 {
@@ -697,17 +730,6 @@ h6 {
   font-size: 1.5em;
   color: #316879;
   margin-bottom: 25px;
-}
-
-.div1admin {
-  margin: 2% auto 5% auto;
-  text-align: center;
-}
-
-.aadmin {
-  font-size: 3em;
-  padding: 0px 5% 0px 5%;
-  color: #F47A60;
 }
 
 .search {
@@ -741,37 +763,6 @@ h6 {
   color: #F47A60;
   padding: 9px;
   margin-left: 10px;
-}
-
-.formcon {
-  text-align: center;
-  margin-top: 25px;
-}
-
-.formheadconnect {
-  border: 1px solid #F47A60;
-  font-family: "damion", sans-serif;
-  color: #F47A60 !important;
-  font-size: 2em;
-  padding: 5px;
-  text-align: center;
-}
-
-.formheadconnect::placeholder {
-  color: #F47A60;
-}
-
-.formheadconnect2 {
-  border: 1px solid #F47A60;
-  font-family: "damion", sans-serif;
-  color: #F47A60 !important;
-  font-size: 2em;
-  padding: 5px;
-  text-align: center;
-}
-
-.formheadconnect2::placeholder {
-  color: #F47A60;
 }
 
 .tabl {
@@ -1037,21 +1028,41 @@ h6 {
 }
 
 .h1ind {
-  margin: 0 auto 5px auto;
+  margin: 20px auto 5px auto;
   text-align: center;
   font-size: 3em;
+}
+@media screen and (max-width: 576px) {
+  .h1ind {
+    font-size: 2em;
+  }
 }
 
 .pindex1 {
   font-family: "Roboto", sans-serif;
   color: #316879;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1em;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+@media screen and (max-width: 576px) {
+  .pindex1 {
+    font-size: 0.9em;
+  }
 }
 
-.pindex {
+.pindex2 {
   font-family: "Roboto", sans-serif;
   color: #316879;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+@media screen and (max-width: 576px) {
+  .pindex2 {
+    font-size: 0.9em;
+  }
 }
 
 .sign {
@@ -1061,6 +1072,12 @@ h6 {
   font-size: 1.2em;
   text-align: right;
   margin-right: 3%;
+}
+@media screen and (max-width: 576px) {
+  .sign {
+    font-size: 1em;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,30 +1,33 @@
+  // menu burger n'apparait que sous les 600px
   @media (max-width:600px) {
 
-    
     .nav{
         display: inherit;
         z-index: 1;
     }
+
     .navfiltre{
         margin: 30px 0;
-
     }
+
     .respmenu{
         margin: 30px 0;
         font-weight: bold;
-
     }
+
     li{ 
         font-style: none;
         list-style: none;
         text-align: center;
     }
+
     #nav-check{
         display:none;
     }
-      .nav2{
-          display: none;
-      }
+
+    .nav2{
+        display: none;
+    }
 
     .nav > .nav-btn {
       display: inline-block;
@@ -54,7 +57,6 @@
     .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
       background-color: rgba(0, 0, 0, 0.3);
     }
-  
 
     .nav > .nav-btn > label > span {
       display: block;
@@ -62,6 +64,7 @@
       height: 10px;
       border-top: 2px solid #eee;
     }
+
     .nav > .nav-links {
       position: absolute;
       display: block;
@@ -73,13 +76,16 @@
       top: 210px;
       left: 0px;
     }
+
     .nav > .nav-links > a {
       display: block;
       width: 100%;
     }
+
     .nav > #nav-check:not(:checked) ~ .nav-links {
       height: 0px;
     }
+    
     .nav > #nav-check:checked ~ .nav-links {
       height: calc(100vh - 50px);
       overflow-y: auto;

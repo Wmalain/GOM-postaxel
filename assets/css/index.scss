@@ -1,3 +1,4 @@
+//mise en forme de la card index
 .indexcard{
     margin: 20px 10% 20px 10%;
     border: 1px solid #316879;
@@ -5,22 +6,42 @@
     font-family: 'Roboto', sans-serif;
     box-shadow: 4px 4px 5px 5px $grey-color;
 }
+// mise en forme du titre Index
 .h1ind{
-    margin: 0 auto 5px auto;
+    margin: 20px auto 5px auto;
     text-align: center;
     font-size: 3em;
+
+    @media screen and (max-width: $small-screen) {
+        font-size: 2em;
+    }
 }
+// mise en forme des paragraphe index
 .pindex1{
     font-family: 'Roboto', sans-serif;
     color: #316879;
     text-align: center;
-    font-size: 1.2em;
-}
-.pindex{
-    font-family: 'Roboto', sans-serif;
-    color: #316879;
+    font-size: 1em;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    text-align: justify;
+
+    @media screen and (max-width: $small-screen) {
+        font-size: 0.9em;
+    }
 }
 
+.pindex2{
+    font-family: 'Roboto', sans-serif;
+    color: #316879;
+    margin-bottom: 15px;
+    text-align: justify;
+
+    @media screen and (max-width: $small-screen) {
+        font-size: 0.9em;
+    }
+}
+// mise en form de la signature index
 .sign{
     font-family: 'damion', sans-serif;
     color: #F47A60;
@@ -28,5 +49,10 @@
     font-size: 1.2em;
     text-align: right;
     margin-right: 3%;
+
+    @media screen and (max-width: $small-screen) {
+        font-size: 1em;
+        text-align: center;
+    }
 
 }
