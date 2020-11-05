@@ -40,10 +40,22 @@ if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
                     $sth->bindValue(':id_date', $id_date);
 
                     $sth->execute();
+                } else {
+                    ?>
+                    <div class="diverreur">
+                        <p class="perreur">une erreur c'est produite</p>
+                        <a href="index.php" type="submit" class="inputbtn retour">Retour</a>
+                    </div>
+                  <?php
                 }
             }
         } else {
-            echo 'Image trop lourde ou de mauvais format';
+            ?>
+    <div class="diverreur">
+        <p class="perreur">Image trop lourde ou d'un mauvais format !</p>
+        <a href="ajoutfilm.php" type="submit" class="inputbtn retour">Retour</a>
+    </div>
+  <?php
         }
     } ?>
 
