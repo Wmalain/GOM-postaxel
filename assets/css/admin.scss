@@ -48,6 +48,16 @@ $small-screen: 500px;
 .formheadconnect2::placeholder{
     color: #F47A60;
 }    
+.btnconnecthead{
+    font-size: 1.5em;
+    border: 1px solid #F47A60;
+    background-color: #316879;
+    font-family: "damion", sans-serif;
+    text-align: center;
+    color: #F47A60;
+    padding: 9px;
+    margin-left: 10px;
+ }
 
 //section ajout film et déconnexion
 .div1admin{
@@ -108,57 +118,136 @@ $small-screen: 500px;
 }
 
 //section résultat de la recherche
+
 .tabl{
-    border: 2px solid #F47A60 !important;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    border: 1px solid #F47A60 !important;
     margin: auto 20%;
-    
-    @media screen and (max-width: $small-screen) {
-        font-size:0.8em;
-        margin: auto 5%;
+    @media screen and (max-width: $medium-screen) {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        border: 1px solid #F47A60 !important;
+        
+
+    }
+}
+.tabgen{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    @media screen and (max-width: $medium-screen) {
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-top:10px;
+             }
+}
+.tabmov1{
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    font-family: "Roboto", Sans-serif;
+    margin-inline-end: 0px;
+    min-width: 50px;
+    @media screen and (max-width: $medium-screen) {
+        display: block;
+        margin: inherit;
+        padding:inherit;
+    }
+
+}
+.tabmov2{
+    margin:55px;
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    font-family: "Roboto", Sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    @media screen and (max-width: $medium-screen) {
+        margin: inherit;
+        padding:inherit;
+        margin-bottom: 20px;;
+    }
+}
+.divico{
+    align-content: center;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 5%;
+    @media screen and (max-width: $medium-screen) {
+        margin: 0 auto 20px auto;
     }
 }
 
-.btnconnecthead{
-    font-size: 1.5em;
-    border: 1px solid #F47A60;
-    background-color: #316879;
-    font-family: "damion", sans-serif;
-    text-align: center;
-    color: #F47A60;
-    padding: 9px;
-    margin-left: 10px;
-}
-
-.tabgen{
-    padding:5px 10%;
-    margin: auto;
-}
-
-.tabmov1{
-    font-size: 1em;
-}
-
-.tabmov2{
-    font-size: 1em;
-    margin: 0 10px 0 20px;
-}
-
-.btnad1{
-    font-size: 1.5em;
-    color: #F47A60;
+.btnad1 {
+    font-size:1.5em;
     margin-right: 30px;
-    padding-left: 30px;
-
-    @media screen and (max-width: $small-screen) {
-        font-size:0.8em;
+    color: #F47A60;
+    @media screen and (max-width: $medium-screen) {
+        margin:0 20px 0 20px;
     }
 }
 .btnad2{
-    font-size: 1.5em;
+    font-size:1.5em;
     color: #F47A60;
-
-    @media screen and (max-width: $small-screen) {
-        font-size:0.8em;
-        margin: auto 5%;
+    @media screen and (max-width: $medium-screen) {
+        margin:0 20px 0 20px;
     }
 }
+// .tabl{
+//     border: 2px solid #F47A60 !important;
+//     margin: auto 20%;
+    
+//     @media screen and (max-width: $small-screen) {
+//         font-size:0.8em;
+//         margin: auto 5%;
+//     }
+// }
+
+ 
+
+// .tabgen{
+//     padding:5px 10%;
+//     margin: auto;
+// }
+
+// .tabmov1{
+//     font-size: 1em;
+// }
+
+// .tabmov2{
+//     font-size: 1em;
+//     margin: 0 10px 0 20px;
+// }
+
+// .btnad1{
+//     font-size: 1.5em;
+//     color: #F47A60;
+//     margin-right: 30px;
+//     padding-left: 30px;
+
+//     @media screen and (max-width: $small-screen) {
+//         font-size:0.8em;
+//     }
+// }
+// .btnad2{
+//     font-size: 1.5em;
+//     color: #F47A60;
+
+//     @media screen and (max-width: $small-screen) {
+//         font-size:0.8em;
+//         margin: auto 5%;
+//     }
+// }

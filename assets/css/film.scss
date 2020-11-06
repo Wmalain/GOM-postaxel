@@ -32,6 +32,11 @@ p {
     margin : 0 2% 0 2%;
 }
 
+strong {
+    font-weight: bold;
+    font-size:1em;
+    color: #F47A60;
+}
 // gestion des titres de la card
     .divtit{
         width:100%;
@@ -63,7 +68,7 @@ p {
 
 .pfunc{
     width: 100%;
-    margin: 5px auto 0 auto;
+    margin: 10px auto 0 auto;
     text-align: center !important;
     font-family: 'Roboto', sans-serif;
     color: $grey-color;
@@ -71,15 +76,33 @@ p {
     font-weight: bold;
     font-size:1.2em;
     @media screen and (max-width: $small-screen) {
-        font-size: 0.8em;
+        font-size: 0.6em;
+        text-align: justify;
+    }
+}
+.pfunc2{
+    width: 100%;
+    margin: 10px auto 0 auto;
+    text-align: center !important;
+    font-family: 'Roboto', sans-serif;
+    color: $grey-color;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:1.5em;
+    @media screen and (max-width: $small-screen) {
+        font-size: 1em;
         text-align: justify;
     }
 }
 // gestion des paragraphes
 .synop{
     text-align: justify;
+    margin-top: 10px !important;
 }
 
+.pdec{
+    margin-bottom:20px !important;
+}  
 .affiche {
     width: 90%;
     margin-top: 15%;
@@ -102,9 +125,8 @@ p {
 }
 
 .movie-info{
-    margin: auto 10px auto 10px;
+    margin: auto 5px auto 5px;
     text-align: center;
-    padding-bottom: 25px;
 }
 
 // gestion général de la card
@@ -137,10 +159,14 @@ p {
 
     .poster-wrapper {
         grid-area: p;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .poster {
             text-align: center;
             align-items:center;
             color: #fff;
+            
 
             @media screen and (max-width: $small-screen) {
                 margin-bottom: 30px;

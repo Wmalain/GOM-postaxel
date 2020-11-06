@@ -1,42 +1,35 @@
-unction displaymovie()
+function searchmovie()
 {
-    global $db;
+    // Ouvre une connexion au serveur MySQL
+    if (isset($_POST['search'])) {
+        global $db;
 
-    // $sql = $db->query('SELECT * FROM movie order by RAND() limit 0,1');
-    $sql = $db->query('SELECT *, age.id AS age_id, date.id AS date_id, genre_de_film.id AS genre_id, type_de_film.id AS type_id FROM movie LEFT JOIN age ON movie.id_age = age_id LEFT JOIN date ON movie.id_date = date_id LEFT JOIN genre_de_film ON movie.id_genre = genre_id LEFT JOIN (type_de_film ON movie.id_type1 = type_id) OR (type_de_film ON movie.id_type2 = type_id) OR (type_de_film ON movie.id_type3 = type_id) order by RAND() limit 0,1');
-    $sql->setFetchMode(PDO::FETCH_ASSOC);
-    while ($row = $sql->fetch()) {
-        ?>
-            <div class="">
-                <div class="vinafficheall">
-                    <p><?php echo $row['titre']; ?></p>
-                    <p><?php echo $row['realisateur']; ?></p>
-                    <p><?php echo $row['synopsis']; ?></p>
-                    <p><?php echo $row['genre']; ?></p>
+        // $conn = mysqli_connect('localhost', 'root', '', 'gom');
 
-                </div>
-            </div>
-        <?php
+        $recherche = $_POST['recherche'];
+
+        $sql = $db->query("SELECT * FROM movie WHERE titre LIKE '%".$recherche."%'");
+        $sql->setFetchMode(PDO::FETCH_ASSOC);
+        if ($sql->execute()) {
+            while ($row = $sql->fetch()) {
+                ?>
+
+</br>
+    <div class="tabl">
+      <table class="tabgen">
+        <tr>
+          <td> <p class="tabmov1"> <?php echo $row['titre']; ?> </p></td> 
+          <td> <p class="tabmov2"> <?php echo $row['realisateur']; ?> </p></td>
+          <td><a class="btnad1" href="modify_movie.php?id=<?php echo $row['id']; ?> "><i class="fas fa-video"></i></a></td>
+          <td><a class="btnad2" href="delete_movie.php?id=<?php echo $row['id']; ?> "><i class="fas fa-trash-alt"></i></a></td>
+          </br>
+        </tr>
+      </table> 
+    </div>
+           
+       
+    <?php
+            }
+        }
     }
-}
-
-
-Ce site est né d’une frustration de ne pas trouver quelque chose du genre sur internet.
-
-Je m’appelle Alain, je suis (au moment de la création de ce site) en formation pour devenir développeur Web FullStack. Ce site est mon projet de fin d’année.
-
-Cinéphile depuis mon plus jeune âge, je suis le genre de mec insupportable qui n’arrête pas de conseiller des films à mes amis. Sauf que l’âge avançant je suis de moins en moins curieux, et j’ai bien moins de temps pour choisir quoi regarder le soir et j'aurais bien aimé avoir un site de se genre.
-
-Alors voilà l’idée de ce site, vous conseillez un film, tiré au sort dans une base de données que je remplis manuellement de mes films de cœur. Certains films sont très connus d’autre moins, ils ont tous quelque chose d’intéressant, ils ont tous marqué mon parcours de cinéphile.
-
-Vous pouvez choisir de voir les films par genre, par envie ou par âge.
-
-Les genres sont plutôt classiques.
-
-Les envies ont été choisies arbitrairement, il est possible de débattre des heures sur ce qu’est un Feel good movie ou un film-choc, dite vous qu’il ne s’agît que de mon appréciation, pour vous permettre une sélection un peu plus précise.
-
-Quant à l’âge selon que vous soyez un enfant, un ado (à partir de 15 ans) ou un adulte je vous conseille des films qui (encore une foi selon moi) son regardable, pas forcement appréciable, mais ces films ne devrais pas vous choquer. Cela dit tout le monde est différent et gardez bien à l’esprit que je ne suis pas le classement PEGI et que je peux me tromper.
-
-Voilà en espérant que vous prendrez plaisir à découvrir ou redécouvrir des films sur mes conseils. 
-Cordialement
-W.M Alain
+}?>

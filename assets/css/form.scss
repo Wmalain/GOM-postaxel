@@ -33,7 +33,7 @@ $small-screen: 576px;
         font-size: 1.1em;
         color: #316879;
 
-        @media screen and (max-width: 720px) {
+        @media screen and (max-width:$medium-screen) {
             width:90%;
         }
     }
@@ -55,7 +55,7 @@ $small-screen: 576px;
         color: #316879;
         margin-top: 5px;
 
-        @media screen and (max-width: 720px) {
+        @media screen and (max-width: $medium-screen) {
             width:90%;
         }
     }
@@ -76,7 +76,7 @@ $small-screen: 576px;
         font-family: 'Roboto', sans-serif;
         color: #316879;
 
-        @media screen and (max-width: 720px) {
+        @media screen and (max-width: $medium-screen) {
             width:90%;
         }
 }
@@ -100,7 +100,7 @@ $small-screen: 576px;
     box-sizing: border-box;
     color: #316879 ;
 
-    @media screen and (max-width: 720px) {
+    @media screen and (max-width: $medium-screen) {
         width:40%;
     }
 }

@@ -24,9 +24,10 @@ function displaymovie()
           <div class="header-section">
             <h1 class="titrefilm"><?php echo $row['titre']; ?></h1>
             <p><?php echo $row['realisateur']; ?> </p>
-            <p><?php echo $row['genre']; ?></p>
-            <p><?php echo $row['decennie']; ?>   /   <?php echo $row['age']; ?></p>
-            <p><?php echo $row['type']; ?></p>
+            <p class="pdec"><?php echo $row['decennie']; ?> </p>
+            <strong><p><?php echo $row['genre']; ?></p></strong>
+            <strong><p><?php echo $row['type']; ?></p></strong>
+            <strong><p><?php echo $row['age']; ?></p></strong>
           </div>
         
           <div class="synopsis-section">
@@ -36,8 +37,8 @@ function displaymovie()
             </p>
           </div>
           <div class="btn">
-            <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
-            <button id="refresh" onclick="document.location.reload(false)" class="btnreload"> Rafraichir </button>
+            <a href="<?php echo $row['lien']; ?>" class="btnimdb" TARGET="_BLANK">IMDB</a>
+            <button id="refresh" onclick="document.location.reload(false)" class="btnreload"> Regénérer </button>
           </div>
 
         </div>
@@ -59,7 +60,8 @@ function displaymoviegenre($id)
         ?>
         <div class="divtit"> 
           <h1 class="h1film"> Quel film voir ce soir ?</h1>
-          <p class="pfunc">Film choisi au <strong> hasard </strong> dans une base de données selon son genre</p>
+          <p class="pfunc">Film choisi au <strong> hasard </strong> dans une base de données <strong>selon son genre</strong></p>
+          <p class="pfunc2"><?php echo $row['genre']; ?></p>
         </div>
    <div class="movie-card">
         <div class="poster-wrapper">
@@ -72,9 +74,10 @@ function displaymoviegenre($id)
           <div class="header-section">
             <h1 class="titrefilm"><?php echo $row['titre']; ?></h1>
             <p><?php echo $row['realisateur']; ?> </p>
-            <p><?php echo $row['genre']; ?></p>
-            <p><?php echo $row['decennie']; ?>   /   <?php echo $row['age']; ?></p>
+            <p class="pdec"><?php echo $row['decennie']; ?> </p>
+            <strong><p><?php echo $row['genre']; ?></p></strong>
             <p><?php echo $row['type']; ?></p>
+            <p><?php echo $row['age']; ?></p>
           </div>
         
           <div class="synopsis-section">
@@ -84,8 +87,8 @@ function displaymoviegenre($id)
             </p>
           </div>
           <div class="btn">
-            <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
-            <button id="refresh" onclick="document.location.reload(false)" class="btnreload"> Rafraichir </button>
+            <a href="<?php echo $row['lien']; ?>" class="btnimdb" TARGET="_BLANK">IMDB</a>
+            <button id="refresh" onclick="document.location.reload(false)" class="btnreload"> Regénérer </button>
           </div>
           
         </div>
@@ -109,6 +112,7 @@ function displaymovieenvie($id)
         <div class="divtit"> 
           <h1 class="h1film"> Quel film voir ce soir ?</h1>
           <p class="pfunc">Film choisi au <strong> hasard </strong> dans une base de données <strong> selon vos envies</strong></p>
+          <p class="pfunc2"><?php echo $row['type']; ?></p>
         </div>
  <div class="movie-card">
         <div class="poster-wrapper">
@@ -121,9 +125,10 @@ function displaymovieenvie($id)
           <div class="header-section">
             <h1 class="titrefilm"><?php echo $row['titre']; ?></h1>
             <p><?php echo $row['realisateur']; ?> </p>
+            <p class="pdec"><?php echo $row['decennie']; ?> </p>
             <p><?php echo $row['genre']; ?></p>
-            <p><?php echo $row['decennie']; ?>   /   <?php echo $row['age']; ?></p>
-            <p><?php echo $row['type']; ?></p>
+            <strong><p><?php echo $row['type']; ?></p></strong>
+            <p><?php echo $row['age']; ?></p>
           </div>
         
           <div class="synopsis-section">
@@ -133,8 +138,8 @@ function displaymovieenvie($id)
             </p>
           </div>
           <div class="btn">
-            <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
-            <button id="refresh" onclick="document.location.reload(false)" class="btnreload"> Rafraichir </button>
+            <a href="<?php echo $row['lien']; ?>" class="btnimdb" TARGET="_BLANK">IMDB</a>
+            <button id="refresh" onclick="document.location.reload(false)" class="btnreload"> Regénérer </button>
           </div>
 
         </div>
@@ -157,6 +162,7 @@ function displaymovieage($id)
         <div class="divtit"> 
           <h1 class="h1film"> Quel film voir ce soir ?</h1>
           <p class="pfunc">Film choisi au <strong> hasard </strong> dans une base de données <strong> selon votre age</strong></p>
+          <p class="pfunc2"><?php echo $row['age']; ?></p>
         </div>
 <div class="movie-card">
         <div class="poster-wrapper">
@@ -169,9 +175,10 @@ function displaymovieage($id)
           <div class="header-section">
             <h1 class="titrefilm"><?php echo $row['titre']; ?></h1>
             <p><?php echo $row['realisateur']; ?> </p>
+            <p class="pdec"><?php echo $row['decennie']; ?> </p>
             <p><?php echo $row['genre']; ?></p>
-            <p><?php echo $row['decennie']; ?>   /   <?php echo $row['age']; ?></p>
             <p><?php echo $row['type']; ?></p>
+            <strong><p><?php echo $row['age']; ?></p></strong>
           </div>
         
           <div class="synopsis-section">
@@ -181,8 +188,8 @@ function displaymovieage($id)
             </p>
           </div>
           <div class="btn">
-            <a href="<?php echo $row['lien']; ?>" class="btnimdb">IMDB</a>
-            <button id="refresh" onclick="document.location.reload(false)" class="btnreload"> Rafraichir </button>
+            <a href="<?php echo $row['lien']; ?>" class="btnimdb" TARGET="_BLANK">IMDB</a>
+            <button id="refresh" onclick="document.location.reload(false)" class="btnreload"> Regénérer </button>
           </div>
 
         </div>
@@ -213,15 +220,15 @@ function searchmovie()
 
 </br>
     <div class="tabl">
-      <table class="tabgen">
-        <tr>
-          <td> <p class="tabmov1"> <?php echo $row['titre']; ?> </p></td> 
-          <td> <p class="tabmov2"> <?php echo $row['realisateur']; ?> </p></td>
-          <td><a class="btnad1" href="modify_movie.php?id=<?php echo $row['id']; ?> "><i class="fas fa-video"></i></a></td>
-          <td><a class="btnad2" href="delete_movie.php?id=<?php echo $row['id']; ?> "><i class="fas fa-trash-alt"></i></a></td>
-          </br>
-        </tr>
-      </table> 
+      <div class="tabgen">
+        <p class="tabmov1"> <?php echo $row['titre']; ?> </p> 
+        <p class="tabmov2"> <?php echo $row['realisateur']; ?> </p>
+      </div>
+        <div class="divico">
+          <a class="btnad1" href="modify_movie.php?id=<?php echo $row['id']; ?> "><i class="fas fa-video"></i></a>
+          <a class="btnad2" href="delete_movie.php?id=<?php echo $row['id']; ?> "><i class="fas fa-trash-alt"></i></a>
+          </div>
+        
     </div>
            
        

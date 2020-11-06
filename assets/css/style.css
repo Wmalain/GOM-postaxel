@@ -474,6 +474,12 @@ p {
   margin: 0 2% 0 2%;
 }
 
+strong {
+  font-weight: bold;
+  font-size: 1em;
+  color: #F47A60;
+}
+
 .divtit {
   width: 100%;
 }
@@ -505,7 +511,7 @@ p {
 
 .pfunc {
   width: 100%;
-  margin: 5px auto 0 auto;
+  margin: 10px auto 0 auto;
   text-align: center !important;
   font-family: "Roboto", sans-serif;
   color: #316879;
@@ -515,13 +521,35 @@ p {
 }
 @media screen and (max-width: 576px) {
   .pfunc {
-    font-size: 0.8em;
+    font-size: 0.6em;
+    text-align: justify;
+  }
+}
+
+.pfunc2 {
+  width: 100%;
+  margin: 10px auto 0 auto;
+  text-align: center !important;
+  font-family: "Roboto", sans-serif;
+  color: #316879;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+@media screen and (max-width: 576px) {
+  .pfunc2 {
+    font-size: 1em;
     text-align: justify;
   }
 }
 
 .synop {
   text-align: justify;
+  margin-top: 10px !important;
+}
+
+.pdec {
+  margin-bottom: 20px !important;
 }
 
 .affiche {
@@ -569,9 +597,8 @@ h6 {
 }
 
 .movie-info {
-  margin: auto 10px auto 10px;
+  margin: auto 5px auto 5px;
   text-align: center;
-  padding-bottom: 25px;
 }
 
 .movie-card {
@@ -604,6 +631,9 @@ h6 {
 }
 .movie-card .poster-wrapper {
   grid-area: p;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .movie-card .poster-wrapper .poster {
   text-align: center;
@@ -706,6 +736,17 @@ h6 {
   color: #F47A60;
 }
 
+.btnconnecthead {
+  font-size: 1.5em;
+  border: 1px solid #F47A60;
+  background-color: #316879;
+  font-family: "damion", sans-serif;
+  text-align: center;
+  color: #F47A60;
+  padding: 9px;
+  margin-left: 10px;
+}
+
 .div1admin {
   margin: 2% auto 5% auto;
   text-align: center;
@@ -766,50 +807,96 @@ h6 {
 }
 
 .tabl {
-  border: 2px solid #F47A60 !important;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  border: 1px solid #F47A60 !important;
   margin: auto 20%;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 780px) {
   .tabl {
-    font-size: 0.8em;
-    margin: auto 5%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid #F47A60 !important;
   }
 }
 
-.btnconnecthead {
-  font-size: 1.5em;
-  border: 1px solid #F47A60;
-  background-color: #316879;
-  font-family: "damion", sans-serif;
-  text-align: center;
-  color: #F47A60;
-  padding: 9px;
-  margin-left: 10px;
-}
-
 .tabgen {
-  padding: 5px 10%;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-left: 10%;
+}
+@media screen and (max-width: 780px) {
+  .tabgen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
 
 .tabmov1 {
-  font-size: 1em;
+  display: block;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: 0px;
+  font-family: "Roboto", Sans-serif;
+  margin-inline-end: 0px;
+  min-width: 50px;
+}
+@media screen and (max-width: 780px) {
+  .tabmov1 {
+    display: block;
+    margin: inherit;
+    padding: inherit;
+  }
 }
 
 .tabmov2 {
+  margin: 55px;
+  display: block;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  font-family: "Roboto", Sans-serif;
   font-size: 1em;
-  margin: 0 10px 0 20px;
+  font-weight: 400;
+}
+@media screen and (max-width: 780px) {
+  .tabmov2 {
+    margin: inherit;
+    padding: inherit;
+    margin-bottom: 20px;
+  }
+}
+
+.divico {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 5%;
+}
+@media screen and (max-width: 780px) {
+  .divico {
+    margin: 0 auto 20px auto;
+  }
 }
 
 .btnad1 {
   font-size: 1.5em;
-  color: #F47A60;
   margin-right: 30px;
-  padding-left: 30px;
+  color: #F47A60;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 780px) {
   .btnad1 {
-    font-size: 0.8em;
+    margin: 0 20px 0 20px;
   }
 }
 
@@ -817,10 +904,9 @@ h6 {
   font-size: 1.5em;
   color: #F47A60;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 780px) {
   .btnad2 {
-    font-size: 0.8em;
-    margin: auto 5%;
+    margin: 0 20px 0 20px;
   }
 }
 
@@ -943,7 +1029,7 @@ h6 {
   font-size: 1.1em;
   color: #316879;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 780px) {
   .inputform {
     width: 90%;
   }
@@ -966,7 +1052,7 @@ h6 {
   color: #316879;
   margin-top: 5px;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 780px) {
   .inputform1 {
     width: 90%;
   }
@@ -988,7 +1074,7 @@ h6 {
   font-family: "Roboto", sans-serif;
   color: #316879;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 780px) {
   .inputform2 {
     width: 90%;
   }
@@ -1013,7 +1099,7 @@ h6 {
   box-sizing: border-box;
   color: #316879;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 780px) {
   .inputbtn {
     width: 40%;
   }
