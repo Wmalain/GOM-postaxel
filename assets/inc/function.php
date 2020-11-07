@@ -11,7 +11,7 @@ function displaymovie()
         ?>
         <div class="divtit"> 
           <h1 class="h1film"> Quel film voir ce soir ?</h1>
-          <p class="pfunc">Film choisi au <strong> hasard </strong> dans une base de données</p>
+          <p class="pfunc">Film choisi au <strong class="strong"> hasard </strong> dans une base de données</p>
         </div>
         <div class="movie-card">
         <div class="poster-wrapper">
@@ -25,9 +25,9 @@ function displaymovie()
             <h1 class="titrefilm"><?php echo $row['titre']; ?></h1>
             <p><?php echo $row['realisateur']; ?> </p>
             <p class="pdec"><?php echo $row['decennie']; ?> </p>
-            <strong><p><?php echo $row['genre']; ?></p></strong>
-            <strong><p><?php echo $row['type']; ?></p></strong>
-            <strong><p><?php echo $row['age']; ?></p></strong>
+            <strong class="strong"><p><?php echo $row['genre']; ?></p></strong>
+            <strong class="strong"><p><?php echo $row['type']; ?></p></strong>
+            <strong class="strong"><p><?php echo $row['age']; ?></p></strong>
           </div>
         
           <div class="synopsis-section">
@@ -60,7 +60,7 @@ function displaymoviegenre($id)
         ?>
         <div class="divtit"> 
           <h1 class="h1film"> Quel film voir ce soir ?</h1>
-          <p class="pfunc">Film choisi au <strong> hasard </strong> dans une base de données <strong>selon son genre</strong></p>
+          <p class="pfunc">Film choisi au <strong class="strong"> hasard </strong> dans une base de données <strong class="strong">selon son genre</strong></p>
           <p class="pfunc2"><?php echo $row['genre']; ?></p>
         </div>
    <div class="movie-card">
@@ -75,7 +75,7 @@ function displaymoviegenre($id)
             <h1 class="titrefilm"><?php echo $row['titre']; ?></h1>
             <p><?php echo $row['realisateur']; ?> </p>
             <p class="pdec"><?php echo $row['decennie']; ?> </p>
-            <strong><p><?php echo $row['genre']; ?></p></strong>
+            <strong class="strong"><p><?php echo $row['genre']; ?></p></strong>
             <p><?php echo $row['type']; ?></p>
             <p><?php echo $row['age']; ?></p>
           </div>
@@ -111,7 +111,7 @@ function displaymovieenvie($id)
         ?>
         <div class="divtit"> 
           <h1 class="h1film"> Quel film voir ce soir ?</h1>
-          <p class="pfunc">Film choisi au <strong> hasard </strong> dans une base de données <strong> selon vos envies</strong></p>
+          <p class="pfunc">Film choisi au <strong class="strong"> hasard </strong> dans une base de données <strong class="strong"> selon vos envies</strong></p>
           <p class="pfunc2"><?php echo $row['type']; ?></p>
         </div>
  <div class="movie-card">
@@ -127,7 +127,7 @@ function displaymovieenvie($id)
             <p><?php echo $row['realisateur']; ?> </p>
             <p class="pdec"><?php echo $row['decennie']; ?> </p>
             <p><?php echo $row['genre']; ?></p>
-            <strong><p><?php echo $row['type']; ?></p></strong>
+            <strong class="strong"><p><?php echo $row['type']; ?></p></strong>
             <p><?php echo $row['age']; ?></p>
           </div>
         
@@ -161,7 +161,7 @@ function displaymovieage($id)
         ?>
         <div class="divtit"> 
           <h1 class="h1film"> Quel film voir ce soir ?</h1>
-          <p class="pfunc">Film choisi au <strong> hasard </strong> dans une base de données <strong> selon votre age</strong></p>
+          <p class="pfunc">Film choisi au <strong class="strong"> hasard </strong> dans une base de données <strong class="strong"> selon votre age</strong></p>
           <p class="pfunc2"><?php echo $row['age']; ?></p>
         </div>
 <div class="movie-card">
@@ -178,7 +178,7 @@ function displaymovieage($id)
             <p class="pdec"><?php echo $row['decennie']; ?> </p>
             <p><?php echo $row['genre']; ?></p>
             <p><?php echo $row['type']; ?></p>
-            <strong><p><?php echo $row['age']; ?></p></strong>
+            <strong class="strong"><p><?php echo $row['age']; ?></p></strong>
           </div>
         
           <div class="synopsis-section">

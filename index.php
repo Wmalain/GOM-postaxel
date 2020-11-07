@@ -6,10 +6,6 @@ require 'assets/inc/header.php';
 <div class="indexcard">
     <h1 class="h1ind">Concept du site !</h1>
     <p class="pindex1"><strong>Ce site est né d’une frustration de ne pas trouver quelque chose du genre sur internet.</strong> </p>
-   
-    <p class="pindex2">
-    Je m’appelle Alain, je suis, au moment de la création de ce site, en formation pour devenir développeur Web FullStack à Talis Business School. Ce site est mon projet de fin d’année.
-    </p>
     <p class="pindex2">
     Cinéphile depuis mon plus jeune âge, je suis le genre de mec insupportable qui n’arrête pas de conseiller des films à mes amis. Sauf que l’âge avançant je suis de moins en moins curieux, et j’ai bien moins de temps pour choisir quoi regarder le soir et j'aurais bien aimé avoir un site de se genre.
     </p>

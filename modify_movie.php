@@ -14,7 +14,7 @@ if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
     </div>
     <div>
         <input type="text" class="inputform" name="real" id="real" value="<?php echo $mov['realisateur']; ?>" placeholder="réalisateur"  required>
-        <select id="genre" placeholder="genre" name="genre" class="inputform">
+        <select id="genre" placeholder="genre" name="genre" class="inputform" required>
             <option value="">--Genre--</option>
             <option value="1">Drame</option> 
             <option value="2">Policier / Thriller</option>
@@ -33,7 +33,7 @@ if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
     </div>
 
     <div>
-        <select id="decenie" name="decenie" class="inputform" placeholder="décénie">
+        <select id="decenie" name="decenie" class="inputform" placeholder="décénie" required>
             <option value="">--décénie--</option>
             <option value="1">90</option>
             <option value="2">80</option>
@@ -44,7 +44,7 @@ if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
             <option value="7">30</option>
             <option value="8">20 et -</option>
         </select>
-        <select id="age" name="age" class="inputform" placeholder="Age">
+        <select id="age" name="age" class="inputform" placeholder="Age" required>
             <option value="">--Age--</option>
             <option value="1">Tous publique</option>
             <option value="2">Ado</option>
@@ -54,7 +54,7 @@ if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
     </div>
 
     <div>
-        <select id="eesprit1" name="ee1" class="inputform" placeholder="état d'esprit">
+        <select id="eesprit1" name="ee1" class="inputform" placeholder="état d'esprit" required>
             <option value="">--état d'esprit--</option>
             <option value="1">feel good movie</option>
             <option value="2">Film choc</option>
@@ -73,7 +73,7 @@ if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
             rows="5" cols="33"><?php echo $mov['synopsis']; ?></textarea>
     </div>
     <div>
-        <input type="file" name="photo" id="photo" class="inputform2" accept=".png,.jpeg,.jpg,.gif">
+        <input type="file" name="photo" id="photo" class="inputform2" accept=".png,.jpeg,.jpg,.gif" required>
     </div>
     <input type="hidden" name="id" class="inputbtn" value="<?php echo $id; ?> ">
     <input type="submit" name="btnmodify" class="inputbtn" value="Modifier le film">
