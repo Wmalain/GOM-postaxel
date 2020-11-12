@@ -8,6 +8,7 @@
      }
     // connexion a la bdd
     $servername = 'localhost'; $dbname = 'gom'; $user = 'root'; $pass = '';
+    // $servername = 'localhost'; $dbname = 'twby2212_gom'; $user = 'twby2212_gom'; $pass = 'BY89R0JsMGMMpHBxKx';
 
     try {
         $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;

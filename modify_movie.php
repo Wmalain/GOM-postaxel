@@ -76,7 +76,7 @@ if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
         <input type="file" name="photo" id="photo" class="inputform2" accept=".png,.jpeg,.jpg,.gif" required>
     </div>
     <input type="hidden" name="id" class="inputbtn" value="<?php echo $id; ?> ">
-    <input type="submit" name="btnmodify" class="inputbtn" value="Modifier le film">
+    <input type="submit" name="btnmodify" class="inputbtn" value="Modifier">
 </form>
 <div class="retourgen">
 <a href="admin.php" type="submit" class="inputbtn retour">Retour</a>

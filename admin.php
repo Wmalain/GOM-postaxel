@@ -45,7 +45,7 @@ if (isset($_SESSION['email']) && '1' == $_SESSION['role']) {
     </div>
 
 <?php
-searchmovie();
+    searchmovie();
 } else {
     ?>
 

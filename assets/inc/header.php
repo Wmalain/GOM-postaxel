@@ -61,7 +61,7 @@ require 'assets/inc/function.php';
 <li> <div class="dropdown respmenu">
     <a class="dropbtn">Par Age</a>
         <div class="dropdown-content">
-            <a href="age.php?age=1">Tous publique</a>
+                <a href="age.php?age=1">Tous publique</a>
             <a href="age.php?age=2">Ado</a>
             <a href="age.php?age=3">Adulte</a>
         </div>

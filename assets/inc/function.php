@@ -11,7 +11,7 @@ function displaymovie()
         ?>
         <div class="divtit"> 
           <h1 class="h1film"> Quel film voir ce soir ?</h1>
-          <p class="pfunc">Film choisi au <strong class="strong"> hasard </strong> dans une base de données</p>
+          <p class="pfunc">Film choisi au <strong class="strong"> hasard </strong> dans une base de données de<strong class="strong"> <?php countmovie(); ?></strong> films</p>
         </div>
         <div class="movie-card">
         <div class="poster-wrapper">
@@ -237,3 +237,15 @@ function searchmovie()
         }
     }
 }?>
+
+<?php
+
+function countmovie()
+{
+    global $db;
+    $sql2 = $db->query('SELECT COUNT(*) as countmovie FROM movie');
+    $sql2->setFetchMode(PDO::FETCH_ASSOC);
+    while ($row2 = $sql2->fetch()) {
+        echo $row2['countmovie'];
+    }
+}

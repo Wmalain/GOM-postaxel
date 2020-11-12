@@ -1,7 +1,8 @@
 <?php
-require 'assets/inc/connect.php';
-require 'assets/inc/head.php';
-require 'assets/inc/function.php';
+require 'assets/inc/header.php';
+// require 'assets/inc/connect.php';
+// require 'assets/inc/head.php';
+// require 'assets/inc/function.php';
 
 if (isset($_POST['btnmodify'])) {
     $id = $_POST['id'];
@@ -38,9 +39,13 @@ if (isset($_POST['btnmodify'])) {
                 $sth->bindValue(':idtype', $id_type1);
                 $sth->bindValue(':iddate', $id_date);
 
-                $sth->execute();
-
-                header('Location:admin.php');
+                $sth->execute(); ?>
+               
+               <div class="diverreur">
+                    <p class="perreur">Film modifié</p>
+                    <a href="admin.php" type="submit" class="inputbtn retour">Retour</a>
+                </div>
+            <?php
             }
         } else {
             echo 'Image trop lourde ou de mauvais format';

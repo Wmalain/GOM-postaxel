@@ -1,7 +1,8 @@
 <?php
 require 'assets/inc/header.php';
     $id = $_GET['age'];
-    displaymovieage($id);
+
+      displaymovieage($id);
 ?>
 
 
